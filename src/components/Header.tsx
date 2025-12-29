@@ -46,21 +46,124 @@ export const Header = () => {
 
           {/* Center: Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-10">
-            <Link to="/treatment" className="text-xs font-bold uppercase tracking-widest text-white hover:opacity-70 transition">
-              Medications
-            </Link>
-            <Link to="/package-labs" className="text-xs font-bold uppercase tracking-widest text-white hover:opacity-70 transition">
-              Labs
-            </Link>
+            <div className="relative group">
+              <button className="flex items-center gap-1 text-xs font-bold uppercase tracking-widest text-white hover:opacity-70 transition h-12">
+                Weight Loss
+                <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-200" />
+              </button>
+              
+              {/* Dropdown Menu */}
+              <div className="absolute top-full left-0 w-64 bg-black border border-gray-800 rounded-b-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+                 <div className="flex flex-col py-2">
+                    <Link to="/weightloss" className="px-6 py-3 text-sm text-gray-300 hover:text-white hover:bg-gray-900 transition text-left">
+                      Compounded Semaglutide
+                    </Link>
+                    <Link to="/weightloss" className="px-6 py-3 text-sm text-gray-300 hover:text-white hover:bg-gray-900 transition text-left">
+                      Compounded Tirzepatide
+                    </Link>
+                    <Link to="/treatment" className="px-6 py-3 text-sm text-gray-300 hover:text-white hover:bg-gray-900 transition text-left">
+                      Low Dose Naltrexone
+                    </Link>
+                 </div>
+              </div>
+            </div>
+            {/* Other Treatments Mega Menu */}
+            <div className="static group">
+              <button className="flex items-center gap-1 text-xs font-bold uppercase tracking-widest text-white hover:opacity-70 transition h-12">
+                Other Treatments
+                <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-200" />
+              </button>
+
+              <div className="absolute top-full left-0 w-full bg-black/95 backdrop-blur-sm border-t border-gray-800 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+                <div className="container mx-auto px-6 py-8">
+                  <div className="grid grid-cols-7 gap-8 text-left">
+                    
+                    {/* Column 1: Longevity */}
+                    <div className="space-y-4">
+                      <h3 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-700 pb-2">Longevity & Anti-Aging</h3>
+                      <div className="flex flex-col gap-2">
+                        <Link to="/sermorelin" className="text-xs text-gray-400 hover:text-white transition">Sermorelin</Link>
+                        <Link to="/metformin" className="text-xs text-gray-400 hover:text-white transition">Metformin</Link>
+                        <Link to="/glutathione" className="text-xs text-gray-400 hover:text-white transition">Glutathione Injectable</Link>
+                        <Link to="/nad-injectable" className="text-xs text-gray-400 hover:text-white transition">NAD+ Injectable</Link>
+                        <Link to="/nad-injectable" className="text-xs text-gray-400 hover:text-white transition">NAD+ Nasal</Link>
+                      </div>
+                    </div>
+
+                    {/* Column 2: Sexual Health */}
+                    <div className="space-y-4">
+                      <h3 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-700 pb-2">Sexual Health</h3>
+                      <div className="flex flex-col gap-2">
+                        <Link to="/trt" className="text-xs text-gray-400 hover:text-white transition">TRT</Link>
+                        <Link to="/trt" className="text-xs text-gray-400 hover:text-white transition">Erectile Dysfunction</Link>
+                        <Link to="/premature-ejaculation" className="text-xs text-gray-400 hover:text-white transition">Premature Ejaculation</Link>
+                        <Link to="/pt-141" className="text-xs text-gray-400 hover:text-white transition">PT-141</Link>
+                      </div>
+                    </div>
+
+                    {/* Column 3: Hair Loss */}
+                    <div className="space-y-4">
+                      <h3 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-700 pb-2">Hair Loss</h3>
+                      <div className="flex flex-col gap-2">
+                        <Link to="/hairloss-men" className="text-xs text-gray-400 hover:text-white transition">Men's Hair Loss</Link>
+                        <Link to="/hairloss-women" className="text-xs text-gray-400 hover:text-white transition">Women's Hair Loss</Link>
+                      </div>
+                    </div>
+                    
+                    {/* Column 4: Beauty */}
+                    <div className="space-y-4">
+                      <h3 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-700 pb-2">Beauty</h3>
+                      <div className="flex flex-col gap-2">
+                        <Link to="/eyelashes" className="text-xs text-gray-400 hover:text-white transition">Eyelashes</Link>
+                        <Link to="/skincare" className="text-xs text-gray-400 hover:text-white transition">Skincare</Link>
+                      </div>
+                    </div>
+
+                    {/* Column 5: Lifestyle */}
+                    <div className="space-y-4">
+                      <h3 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-700 pb-2">Lifestyle</h3>
+                      <div className="flex flex-col gap-2">
+                        <Link to="/b12" className="text-xs text-gray-400 hover:text-white transition">B12</Link>
+                        <Link to="/treatment" className="text-xs text-gray-400 hover:text-white transition">Propranolol</Link>
+                        <Link to="/treatment" className="text-xs text-gray-400 hover:text-white transition">Stop Smoking</Link>
+                        <Link to="/sleep" className="text-xs text-gray-400 hover:text-white transition">Sleep</Link>
+                      </div>
+                    </div>
+
+                    {/* Column 6: Other Therapies */}
+                    <div className="space-y-4">
+                      <h3 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-700 pb-2">Other Therapies</h3>
+                      <div className="flex flex-col gap-2">
+                        <Link to="/herpes" className="text-xs text-gray-400 hover:text-white transition">Herpes</Link>
+                        <Link to="/cold-sores" className="text-xs text-gray-400 hover:text-white transition">Cold Sores</Link>
+                        <Link to="/acid-reflux" className="text-xs text-gray-400 hover:text-white transition">Acid Reflux</Link>
+                        <Link to="/birth-control" className="text-xs text-gray-400 hover:text-white transition">Birth Control</Link>
+                      </div>
+                    </div>
+
+                    {/* Column 7: Other Peptides */}
+                    <div className="space-y-4">
+                      <h3 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-700 pb-2">Other Peptides</h3>
+                      <div className="flex flex-col gap-2">
+                        <Link to="/sermorelin" className="text-xs text-gray-400 hover:text-white transition">Sermorelin</Link>
+                        <Link to="/pt-141" className="text-xs text-gray-400 hover:text-white transition">PT-141</Link>
+                        <span className="text-xs text-gray-600 italic">More to come...</span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
             <Link to="/trt" className="text-xs font-bold uppercase tracking-widest text-white hover:opacity-70 transition">
-              TRT
+              Providers
             </Link>
-            <Link to="/coaching" className="text-xs font-bold uppercase tracking-widest text-white hover:opacity-70 transition">
+            {/* <Link to="/coaching" className="text-xs font-bold uppercase tracking-widest text-white hover:opacity-70 transition">
               Coaching
             </Link>
             <Link to="/about" className="text-xs font-bold uppercase tracking-widest text-white hover:opacity-70 transition">
               About
-            </Link>
+            </Link> */}
           </nav>
 
           {/* Right side: Icons */}
