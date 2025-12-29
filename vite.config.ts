@@ -6,7 +6,8 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const basePath =
-    process.env.VITE_BASE_PATH || (mode === "production" ? "/v2/" : "/");
+    // process.env.VITE_BASE_PATH || (mode === "production" ? "/v2/" : "/");
+    process.env.VITE_BASE_PATH || "/";
 
   return {
     base: basePath,
