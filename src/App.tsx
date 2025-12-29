@@ -31,11 +31,12 @@ import TRT from "./pages/Therapy/TRT";
 import WeightLoss from "./pages/Therapy/WeightLoss";
 
 
+import ScrollToTop from "./components/ScrollToTop";
+
 function App() {
   return (
     <BrowserRouter>
-      
-
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/treatment" element={<TreatmentsPage />} />
