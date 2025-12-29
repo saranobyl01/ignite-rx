@@ -4,14 +4,12 @@ import { Navigation, Pagination } from 'swiper/modules';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-// Import Images (using updated webp assets from FeaturedTherapies)
+// Import Images
 import med_vial from "../assets/vial.png";
-import med_nasal from "../assets/vial.png";
-import med_tablet from "../assets/vial.png";
-import med_cream from "../assets/vial.png";
-
-// Fallback if webp not found, but likely they exist given FeaturedTherapies usage
-// If not, we can revert to pngs or placeholders.
+import med_bottle from "../assets/bottle.png";
+import med_spray from "../assets/spray.png";
+import med_drop from "../assets/drop.png";
+import med_cream from "../assets/cream.png";
 
 // Import Swiper styles
 import 'swiper/css';
@@ -43,7 +41,7 @@ const products = [
     catColor: 'text-blue-400',
     name: 'Low Dose Naltrexone',
     price: '$89.00',
-    image: med_tablet,
+    image: med_bottle,
     link: '/low-dose-naltrexone'
   },
   {
@@ -51,7 +49,7 @@ const products = [
     catColor: 'text-blue-400',
     name: 'Metformin',
     price: '$75.00',
-    image: med_tablet,
+    image: med_bottle,
     link: '/metformin'
   },
   {
@@ -83,7 +81,7 @@ const products = [
     catColor: 'text-blue-400',
     name: 'NAD+ Nasal',
     price: '$199.00',
-    image: med_nasal,
+    image: med_spray,
     link: '/nad-nasal'
   },
 
@@ -101,7 +99,7 @@ const products = [
     catColor: 'text-red-400',
     name: 'Erectile Dysfunction',
     price: '$89.00',
-    image: med_tablet,
+    image: med_vial, // Links to TRT which is vial
     link: '/trt'
   },
   {
@@ -109,7 +107,7 @@ const products = [
     catColor: 'text-red-400',
     name: 'Premature Ejaculation',
     price: '$89.00',
-    image: med_tablet,
+    image: med_bottle,
     link: '/premature-ejaculation'
   },
   {
@@ -127,7 +125,7 @@ const products = [
     catColor: 'text-orange-400',
     name: "Men's Hair Loss",
     price: '$89.00',
-    image: med_cream,
+    image: med_bottle,
     link: '/hairloss-men'
   },
   {
@@ -135,7 +133,7 @@ const products = [
     catColor: 'text-orange-400',
     name: "Women's Hair Loss",
     price: '$89.00',
-    image: med_cream,
+    image: med_bottle,
     link: '/hairloss-women'
   },
 
@@ -145,7 +143,7 @@ const products = [
     catColor: 'text-pink-400',
     name: 'Eyelashes',
     price: '$119.00',
-    image: med_nasal, // Similar bottle
+    image: med_drop,
     link: '/eyelashes'
   },
   {
@@ -163,7 +161,7 @@ const products = [
     catColor: 'text-green-400',
     name: 'Vitamin B12',
     price: '$59.00',
-    image: med_vial,
+    image: med_bottle,
     link: '/b12'
   },
   {
@@ -171,7 +169,7 @@ const products = [
     catColor: 'text-green-400',
     name: 'Propranolol',
     price: '$87.00',
-    image: med_tablet,
+    image: med_bottle,
     link: '/propranolol'
   },
   {
@@ -179,7 +177,7 @@ const products = [
     catColor: 'text-green-400',
     name: 'Stop Smoking',
     price: '$89.00',
-    image: med_tablet,
+    image: med_bottle,
     link: '/stop-smoking'
   },
   {
@@ -187,7 +185,7 @@ const products = [
     catColor: 'text-green-400',
     name: 'Sleep',
     price: '$89.00',
-    image: med_tablet,
+    image: med_bottle,
     link: '/sleep'
   },
 
@@ -197,7 +195,7 @@ const products = [
     catColor: 'text-gray-400',
     name: 'Herpes',
     price: '$89.00',
-    image: med_tablet,
+    image: med_bottle,
     link: '/herpes'
   },
   {
@@ -205,7 +203,7 @@ const products = [
     catColor: 'text-gray-400',
     name: 'Cold Sores',
     price: '$89.00',
-    image: med_tablet,
+    image: med_bottle,
     link: '/cold-sores'
   },
   {
@@ -213,7 +211,7 @@ const products = [
     catColor: 'text-gray-400',
     name: 'Acid Reflux',
     price: '$89.00',
-    image: med_tablet,
+    image: med_bottle,
     link: '/acid-reflux'
   },
   {
@@ -221,7 +219,7 @@ const products = [
     catColor: 'text-gray-400',
     name: 'Birth Control',
     price: '$29.00',
-    image: med_tablet,
+    image: med_bottle,
     link: '/birth-control'
   },
 ];
