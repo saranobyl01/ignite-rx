@@ -1,0 +1,70 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Footer } from "./components/Footer";
+import { GetStartedSec } from "./components/GetStartedSec";
+import { Header } from "./components/Header";
+import Home from "./pages/Home";
+import TreatmentsPage from "./pages/TreatmentsPage";
+import PackageLabs from "./pages/PackageLabs";
+import IndividualLabs from "./pages/IndividualLabs";
+import TestDetails from "./pages/TestDetails";
+import AcidReflux from "./pages/Therapy/AcidReflux";
+import B12 from "./pages/Therapy/B12";
+import BirthControl from "./pages/Therapy/BirthControl";
+import ColdSores from "./pages/Therapy/ColdSores";
+import Eyelashes from "./pages/Therapy/Eyelashes";
+import Glutathione from "./pages/Therapy/Glutathione";
+import Hairloss from "./pages/Therapy/Hairloss";
+import HairlossMen from "./pages/Therapy/HairlossMen";
+import Herpes from "./pages/Therapy/Herpes";
+import Metfrormin from "./pages/Therapy/Metfrormin";
+import NadInjectable from "./pages/Therapy/NadInjectable";
+import NadNasal from "./pages/Therapy/NadNasal";
+import PrematureEjaculation from "./pages/Therapy/PrematureEjaculation";
+import Pt141 from "./pages/Therapy/Pt141";
+import Sermorelin from "./pages/Therapy/Sermorelin";
+import Skincare from "./pages/Therapy/Skincare";
+import Sleep from "./pages/Therapy/Sleep";
+import TRT from "./pages/Therapy/TRT";
+import WeightLoss from "./pages/Therapy/WeightLoss";
+
+
+function App() {
+  return (
+    <BrowserRouter>
+      
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/treatment" element={<TreatmentsPage />} />
+         <Route path="/package-labs" element={<PackageLabs />} />
+         <Route path="/individual-labs" element={<IndividualLabs />} />
+         <Route path="/individual-labs/:slug" element={<TestDetails />} />
+
+         {/* therapies */}
+         <Route path="/acid-reflux" element={<AcidReflux />} />
+         <Route path="/b12" element={<B12 />} />
+         <Route path="/birth-control" element={<BirthControl />} />
+         <Route path="/cold-sores" element={<ColdSores />} />
+         <Route path="/eyelashes" element={<Eyelashes />} />
+         <Route path="/glutathione" element={<Glutathione/>} />
+         <Route path="/hairloss-women" element={<Hairloss/>} />
+         <Route path="/hairloss-men" element={<HairlossMen/>} />
+         <Route path="/herpes" element={<Herpes/>} />
+         <Route path="/metformin" element={<Metfrormin/>} />
+         <Route path="/nad-injectable" element={<NadInjectable/>} />
+         <Route path="/premature-ejaculation" element={<PrematureEjaculation/>} />
+         <Route path="/pt-141" element={<Pt141/>} />
+          <Route path="/sermorelin" element={<Sermorelin/>} />
+          <Route path="/skincare" element={<Skincare/>} />
+          <Route path="/sleep" element={<Sleep/>} />
+          <Route path="/trt" element={<TRT/>} />
+          <Route path="/weightloss" element={<WeightLoss/>} />
+      </Routes>
+
+ 
+      <Footer />
+    </BrowserRouter>
+  );
+}
+
+export default App;

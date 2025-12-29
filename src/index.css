@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* 
+  Black & White Design System
+  All colors are grayscale in HSL.
+*/
+
+
+@layer base {
+  :root {
+
+    /* font */
+
+     --font-inter: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+    /* Core Colors */
+    --background: 0 0% 100%;        /* White */
+    --foreground: 0 0% 0%;          /* Black */
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    /* Primary (Black text/buttons) */
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary (Light gray background) */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 10%;
+
+    /* Muted text and surfaces */
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 40%;
+
+    /* Accent (Neutral Gray) */
+    --accent: 0 0% 20%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive (Dark Gray for errors) */
+    --destructive: 0 0% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and Inputs */
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 0 0% 0%;
+
+    /* Radius and Shadows */
+    --radius: 0.5rem;
+    --shadow-soft: 0 2px 8px -2px hsl(0 0% 0% / 0.1);
+    --shadow-medium: 0 4px 16px -4px hsl(0 0% 0% / 0.15);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Gradients (subtle grayscale) */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0%), hsl(0 0% 30%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 95%));
+
+    /* Trust (Neutralized to gray) */
+    --trust: 0 0% 20%;
+    --trust-foreground: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 0 0% 80%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 0% 40%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 0% 100%;
+
+    --trust: 0 0% 60%;
+    --trust-foreground: 0 0% 0%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+     font-family: var(--font-inter);
+  }
+}
+	
+.slick-slide > div {
+  height: 100%;
+}
+/* This targets the moving part of the progress bar */
+
+.best-pagination2 .swiper-pagination-progressbar-fill {
+  background-color: white !important; /* Replace with your specific color */
+}
+.best-pagination3 .swiper-pagination-progressbar-fill {
+  background-color: white !important; /* Replace with your specific color */
+}
+
+
+/* This forces Swiper to move at a constant speed (Linear) */
+.ticker-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+/* Optional: Custom slow float animation for the bottle */
+
