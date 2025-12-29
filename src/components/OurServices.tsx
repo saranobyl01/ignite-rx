@@ -1,12 +1,15 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
-import { Check } from 'lucide-react';
-import ser1 from "../assets/advanced lab testing.webp";
-import ser2 from "../assets/performance_solutions.webp";
-import ser3 from "../assets/weight management.webp";
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import ser4 from "../assets/longevity_focus.webp";
+
+// Images
+import weightLoss from "../assets/aweight_loss.webp";
+import longevity from "../assets/longevity_focus.webp";
+import sexualHealth from "../assets/performance_solutions.webp"; // Using performance solutions for Sexual Health
+import hairLoss from "../assets/HairLoss.webp";
+import beauty from "../assets/Skincare.webp";
+import lifestyle from "../assets/lifestyle.webp";
 
 // Import Swiper styles
 import 'swiper/css';
@@ -14,24 +17,28 @@ import 'swiper/css/pagination';
 
 const services = [
   {
-    title: "ADVANCED LAB TESTING",
-    image: ser1,
-    features: ["Comprehensive metabolic panels", "Hormone optimization tracking", "Personalized health insights"]
+    title: "WEIGHT LOSS",
+    image: weightLoss,
   },
   {
-    title: "PERFORMANCE SOLUTIONS",
-    image: ser2,
-    features: ["Hormone Optimization", "Enhanced athletic performance", "Recovery support"]
+    title: "LONGEVITY & ANTI-AGING",
+    image: longevity,
   },
   {
-    title: "WEIGHT MANAGEMENT",
-    image: ser3,
-    features: ["Science-based approaches", "Sustainable results", "Personalized protocols"]
+    title: "SEXUAL HEALTH",
+    image: sexualHealth,
   },
   {
-    title: "LONGEVITY FOCUS",
-    image: ser4,
-    features: ["Improve health-span and lifespan", "Preventive care", "Cutting edge treatments"]
+    title: "HAIR LOSS",
+    image: hairLoss,
+  },
+  {
+    title: "BEAUTY",
+    image: beauty,
+  },
+  {
+    title: "LIFESTYLE",
+    image: lifestyle,
   }
 ];
 
@@ -59,15 +66,8 @@ export const OurServices = () => {
           Prescription treatments guided by licensed healthcare professionals          </p>
         </div>
 
-        {/* Desktop View: Grid (Hidden on Mobile) */}
-        <div className="hidden lg:grid grid-cols-4 gap-4">
-          {services.map((service, index) => (
-            <ServiceCard key={index} service={service} />
-          ))}
-        </div>
-
-        {/* Mobile View: Swiper Slider (Hidden on Desktop) */}
-        <div className="lg:hidden">
+        {/* Unified Swiper Slider for Mobile and Desktop */}
+        <div>
           <Swiper
             modules={[Navigation, Pagination]}
             spaceBetween={16}
@@ -82,7 +82,7 @@ export const OurServices = () => {
             }}
             breakpoints={{
               640: { slidesPerView: 2 },
-              1024: { slidesPerView: 5 }, // 5 items visible like in the image
+              1024: { slidesPerView: 4 }, // 4 items visible on desktop
             }}
             className=""
           >
@@ -128,15 +128,6 @@ const ServiceCard = ({ service }) => (
       <h3 className="text-xl font-black leading-tight tracking-tight mb-auto max-w-[150px]">
         {service.title}
       </h3>
-
-      {/* <ul className="space-y-3 mt-4 py-1 px-4">
-        {service.features.map((feature, i) => (
-          <li key={i} className="flex items-center gap-2 text-[11px] md:text-xs text-gray-300 font-medium">
-            <Check size={14} className="text-white mt-0.5 shrink-0" />
-            <span className='text-white/60 text-[16px] leading-[24px]'>{feature}</span>
-          </li>
-        ))}
-      </ul> */}
     </div>
   </div>
 );

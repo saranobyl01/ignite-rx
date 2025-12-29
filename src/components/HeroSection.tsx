@@ -59,7 +59,7 @@ export const HeroSection = () => {
           </p> */}
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
+          {/* <div className="flex flex-col sm:flex-row gap-4">
             <Button
               size="lg"
               className="bg-white text-black hover:bg-gray-200 font-bold px-10 py-7 text-md rounded-sm"
@@ -75,7 +75,7 @@ export const HeroSection = () => {
             >
               Labs
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

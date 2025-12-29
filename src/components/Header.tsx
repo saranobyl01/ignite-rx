@@ -61,9 +61,9 @@ export const Header = () => {
                     <Link to="/weightloss" className="px-6 py-3 text-sm text-gray-300 hover:text-white hover:bg-gray-900 transition text-left">
                       Compounded Tirzepatide
                     </Link>
-                    <Link to="/treatment" className="px-6 py-3 text-sm text-gray-300 hover:text-white hover:bg-gray-900 transition text-left">
-                      Low Dose Naltrexone
-                    </Link>
+                     <Link to="/low-dose-naltrexone" className="px-6 py-3 text-sm text-gray-300 hover:text-white hover:bg-gray-900 transition text-left">
+                       Low Dose Naltrexone
+                     </Link>
                  </div>
               </div>
             </div>
@@ -80,19 +80,19 @@ export const Header = () => {
                     
                     {/* Column 1: Longevity */}
                     <div className="space-y-4">
-                      <h3 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-700 pb-2">Longevity & Anti-Aging</h3>
+                      <h3 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-700 pb-2 min-h-[48px] flex items-end">Longevity & Anti-Aging</h3>
                       <div className="flex flex-col gap-2">
                         <Link to="/sermorelin" className="text-xs text-gray-400 hover:text-white transition">Sermorelin</Link>
                         <Link to="/metformin" className="text-xs text-gray-400 hover:text-white transition">Metformin</Link>
                         <Link to="/glutathione" className="text-xs text-gray-400 hover:text-white transition">Glutathione Injectable</Link>
                         <Link to="/nad-injectable" className="text-xs text-gray-400 hover:text-white transition">NAD+ Injectable</Link>
-                        <Link to="/nad-injectable" className="text-xs text-gray-400 hover:text-white transition">NAD+ Nasal</Link>
+                        <Link to="/nad-nasal" className="text-xs text-gray-400 hover:text-white transition">NAD+ Nasal</Link>
                       </div>
                     </div>
 
                     {/* Column 2: Sexual Health */}
                     <div className="space-y-4">
-                      <h3 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-700 pb-2">Sexual Health</h3>
+                      <h3 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-700 pb-2 min-h-[48px] flex items-end">Sexual Health</h3>
                       <div className="flex flex-col gap-2">
                         <Link to="/trt" className="text-xs text-gray-400 hover:text-white transition">TRT</Link>
                         <Link to="/trt" className="text-xs text-gray-400 hover:text-white transition">Erectile Dysfunction</Link>
@@ -103,7 +103,7 @@ export const Header = () => {
 
                     {/* Column 3: Hair Loss */}
                     <div className="space-y-4">
-                      <h3 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-700 pb-2">Hair Loss</h3>
+                      <h3 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-700 pb-2 min-h-[48px] flex items-end">Hair Loss</h3>
                       <div className="flex flex-col gap-2">
                         <Link to="/hairloss-men" className="text-xs text-gray-400 hover:text-white transition">Men's Hair Loss</Link>
                         <Link to="/hairloss-women" className="text-xs text-gray-400 hover:text-white transition">Women's Hair Loss</Link>
@@ -112,7 +112,7 @@ export const Header = () => {
                     
                     {/* Column 4: Beauty */}
                     <div className="space-y-4">
-                      <h3 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-700 pb-2">Beauty</h3>
+                      <h3 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-700 pb-2 min-h-[48px] flex items-end">Beauty</h3>
                       <div className="flex flex-col gap-2">
                         <Link to="/eyelashes" className="text-xs text-gray-400 hover:text-white transition">Eyelashes</Link>
                         <Link to="/skincare" className="text-xs text-gray-400 hover:text-white transition">Skincare</Link>
@@ -121,18 +121,18 @@ export const Header = () => {
 
                     {/* Column 5: Lifestyle */}
                     <div className="space-y-4">
-                      <h3 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-700 pb-2">Lifestyle</h3>
+                      <h3 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-700 pb-2 min-h-[48px] flex items-end">Lifestyle</h3>
                       <div className="flex flex-col gap-2">
                         <Link to="/b12" className="text-xs text-gray-400 hover:text-white transition">B12</Link>
-                        <Link to="/treatment" className="text-xs text-gray-400 hover:text-white transition">Propranolol</Link>
-                        <Link to="/treatment" className="text-xs text-gray-400 hover:text-white transition">Stop Smoking</Link>
+                        <Link to="/propranolol" className="text-xs text-gray-400 hover:text-white transition">Propranolol</Link>
+                        <Link to="/stop-smoking" className="text-xs text-gray-400 hover:text-white transition">Stop Smoking</Link>
                         <Link to="/sleep" className="text-xs text-gray-400 hover:text-white transition">Sleep</Link>
                       </div>
                     </div>
 
                     {/* Column 6: Other Therapies */}
                     <div className="space-y-4">
-                      <h3 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-700 pb-2">Other Therapies</h3>
+                      <h3 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-700 pb-2 min-h-[48px] flex items-end">Other Therapies</h3>
                       <div className="flex flex-col gap-2">
                         <Link to="/herpes" className="text-xs text-gray-400 hover:text-white transition">Herpes</Link>
                         <Link to="/cold-sores" className="text-xs text-gray-400 hover:text-white transition">Cold Sores</Link>
@@ -143,7 +143,7 @@ export const Header = () => {
 
                     {/* Column 7: Other Peptides */}
                     <div className="space-y-4">
-                      <h3 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-700 pb-2">Other Peptides</h3>
+                      <h3 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-700 pb-2 min-h-[48px] flex items-end">Other Peptides</h3>
                       <div className="flex flex-col gap-2">
                         <Link to="/sermorelin" className="text-xs text-gray-400 hover:text-white transition">Sermorelin</Link>
                         <Link to="/pt-141" className="text-xs text-gray-400 hover:text-white transition">PT-141</Link>
