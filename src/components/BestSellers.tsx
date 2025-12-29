@@ -2,7 +2,16 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+// Import Images (using updated webp assets from FeaturedTherapies)
 import med_vial from "../assets/vial.png";
+import med_nasal from "../assets/vial.png";
+import med_tablet from "../assets/vial.png";
+import med_cream from "../assets/vial.png";
+
+// Fallback if webp not found, but likely they exist given FeaturedTherapies usage
+// If not, we can revert to pngs or placeholders.
 
 // Import Swiper styles
 import 'swiper/css';
@@ -10,73 +19,217 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const products = [
+  // Weight Loss
   {
-    id: 1,
-    category: 'Performance',
-    catColor: 'text-blue-400',
-    name: 'Testosterone Cypionate',
-    price: '$89.00',
-    oldPrice: '$99.00',
-    image: med_vial,
-    description: 'L-Carnitine is a naturally occurring amino acid derivative that plays a key role in the body\'s energy production...',
-  },
-  {
-    id: 2,
     category: 'Weight Loss',
     catColor: 'text-purple-400',
-    name: 'Tirzepatide',
+    name: 'Compounded Semaglutide',
     price: '$299.00',
-    oldPrice: '$350.00',
     image: med_vial,
-    description: 'This powerful blend combines Tirzepatide, Glycine, and Vitamin B12 to optimize weight loss, metabolic health...',
+    link: '/weightloss'
   },
-  // {
-  //   id: 1,
-  //   category: 'Performance',
-  //   catColor: 'text-blue-400',
-  //   name: 'L-Carnitine 500 mg/ml 30mL',
-  //   price: '$89.00',
-  //   oldPrice: '$99.00',
-  //   image: med_vial,
-  //   description: 'L-Carnitine is a naturally occurring amino acid derivative that plays a key role in the body\'s energy production...',
-  // },
-  // {
-  //   id: 2,
-  //   category: 'Weight Loss',
-  //   catColor: 'text-purple-400',
-  //   name: 'Tirzepatide/Glycine/B12 1...',
-  //   price: '$299.00',
-  //   oldPrice: '$350.00',
-  //   image: med_vial,
-  //   description: 'This powerful blend combines Tirzepatide, Glycine, and Vitamin B12 to optimize weight loss, metabolic health...',
-  // },
-  // {
-  //   id: 1,
-  //   category: 'Performance',
-  //   catColor: 'text-blue-400',
-  //   name: 'L-Carnitine 500 mg/ml 30mL',
-  //   price: '$89.00',
-  //   oldPrice: '$99.00',
-  //   image: med_vial,
-  //   description: 'L-Carnitine is a naturally occurring amino acid derivative that plays a key role in the body\'s energy production...',
-  // },
-  // {
-  //   id: 2,
-  //   category: 'Weight Loss',
-  //   catColor: 'text-purple-400',
-  //   name: 'Tirzepatide/Glycine/B12 1...',
-  //   price: '$299.00',
-  //   oldPrice: '$350.00',
-  //   image: med_vial,
-  //   description: 'This powerful blend combines Tirzepatide, Glycine, and Vitamin B12 to optimize weight loss, metabolic health...',
-  // },
-  // Add more products as needed...
+  {
+    category: 'Weight Loss',
+    catColor: 'text-purple-400',
+    name: 'Compounded Tirzepatide',
+    price: '$350.00',
+    image: med_vial,
+    link: '/weightloss'
+  },
+
+  // Longevity
+  {
+    category: 'Longevity',
+    catColor: 'text-blue-400',
+    name: 'Low Dose Naltrexone',
+    price: '$89.00',
+    image: med_tablet,
+    link: '/low-dose-naltrexone'
+  },
+  {
+    category: 'Longevity',
+    catColor: 'text-blue-400',
+    name: 'Metformin',
+    price: '$75.00',
+    image: med_tablet,
+    link: '/metformin'
+  },
+  {
+    category: 'Longevity',
+    catColor: 'text-blue-400',
+    name: 'Sermorelin',
+    price: '$229.00',
+    image: med_vial,
+    link: '/sermorelin'
+  },
+  {
+    category: 'Longevity',
+    catColor: 'text-blue-400',
+    name: 'Glutathione Injectable',
+    price: '$189.00',
+    image: med_vial,
+    link: '/glutathione'
+  },
+  {
+    category: 'Longevity',
+    catColor: 'text-blue-400',
+    name: 'NAD+ Injectable',
+    price: '$249.00',
+    image: med_vial,
+    link: '/nad-injectable'
+  },
+  {
+    category: 'Longevity',
+    catColor: 'text-blue-400',
+    name: 'NAD+ Nasal',
+    price: '$199.00',
+    image: med_nasal,
+    link: '/nad-nasal'
+  },
+
+  // Sexual Health
+  {
+    category: 'Sexual Health',
+    catColor: 'text-red-400',
+    name: 'TRT',
+    price: 'From $199.00',
+    image: med_vial,
+    link: '/trt'
+  },
+  {
+    category: 'Sexual Health',
+    catColor: 'text-red-400',
+    name: 'Erectile Dysfunction',
+    price: '$89.00',
+    image: med_tablet,
+    link: '/trt'
+  },
+  {
+    category: 'Sexual Health',
+    catColor: 'text-red-400',
+    name: 'Premature Ejaculation',
+    price: '$89.00',
+    image: med_tablet,
+    link: '/premature-ejaculation'
+  },
+  {
+    category: 'Sexual Health',
+    catColor: 'text-red-400',
+    name: 'PT-141',
+    price: '$229.00',
+    image: med_vial,
+    link: '/pt-141'
+  },
+
+  // Hair Loss
+  {
+    category: 'Hair Loss',
+    catColor: 'text-orange-400',
+    name: "Men's Hair Loss",
+    price: '$89.00',
+    image: med_cream,
+    link: '/hairloss-men'
+  },
+  {
+    category: 'Hair Loss',
+    catColor: 'text-orange-400',
+    name: "Women's Hair Loss",
+    price: '$89.00',
+    image: med_cream,
+    link: '/hairloss-women'
+  },
+
+  // Beauty
+  {
+    category: 'Beauty',
+    catColor: 'text-pink-400',
+    name: 'Eyelashes',
+    price: '$119.00',
+    image: med_nasal, // Similar bottle
+    link: '/eyelashes'
+  },
+  {
+    category: 'Beauty',
+    catColor: 'text-pink-400',
+    name: 'Skincare',
+    price: '$99.00',
+    image: med_cream,
+    link: '/skincare'
+  },
+
+  // Lifestyle
+  {
+    category: 'Lifestyle',
+    catColor: 'text-green-400',
+    name: 'Vitamin B12',
+    price: '$59.00',
+    image: med_vial,
+    link: '/b12'
+  },
+  {
+    category: 'Lifestyle',
+    catColor: 'text-green-400',
+    name: 'Propranolol',
+    price: '$87.00',
+    image: med_tablet,
+    link: '/propranolol'
+  },
+  {
+    category: 'Lifestyle',
+    catColor: 'text-green-400',
+    name: 'Stop Smoking',
+    price: '$89.00',
+    image: med_tablet,
+    link: '/stop-smoking'
+  },
+  {
+    category: 'Lifestyle',
+    catColor: 'text-green-400',
+    name: 'Sleep',
+    price: '$89.00',
+    image: med_tablet,
+    link: '/sleep'
+  },
+
+  // Other
+  {
+    category: 'Other Therapies',
+    catColor: 'text-gray-400',
+    name: 'Herpes',
+    price: '$89.00',
+    image: med_tablet,
+    link: '/herpes'
+  },
+  {
+    category: 'Other Therapies',
+    catColor: 'text-gray-400',
+    name: 'Cold Sores',
+    price: '$89.00',
+    image: med_tablet,
+    link: '/cold-sores'
+  },
+  {
+    category: 'Other Therapies',
+    catColor: 'text-gray-400',
+    name: 'Acid Reflux',
+    price: '$89.00',
+    image: med_tablet,
+    link: '/acid-reflux'
+  },
+  {
+    category: 'Other Therapies',
+    catColor: 'text-gray-400',
+    name: 'Birth Control',
+    price: '$29.00',
+    image: med_tablet,
+    link: '/birth-control'
+  },
 ];
 
 export const BestSellers = () => {
   return (
     <section className="bg-black text-white py-8 md:py-18">
-      <div className=" px-6">
+      <div className="px-6">
         
         {/* Header with Navigation and Progress */}
         <div className="container mx-auto flex items-center justify-between mb-12">
@@ -102,7 +255,7 @@ export const BestSellers = () => {
         </div>
 
         {/* Product Swiper */}
-        {/* <Swiper
+        <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={16}
           slidesPerView={1.2}
@@ -116,17 +269,17 @@ export const BestSellers = () => {
           }}
           breakpoints={{
             640: { slidesPerView: 2 },
-            1024: { slidesPerView: 5 }, // 5 items visible like in the image
+            1024: { slidesPerView: 4 }, 
+            1280: { slidesPerView: 5 },
           }}
           className=""
-        > */}
-        <div className='flex  container mx-auto justify-center flex-wrap gap-4'>
-          {products.map((product) => (
-            // <SwiperSlide key={product.id}>
-            <div className="flex flex-col w-[450px] h-[500px] bg-black">
+        >
+          {products.map((product, index) => (
+            <SwiperSlide key={index}>
+              <div className="flex flex-col h-full bg-black">
                 
                 {/* Image Container */}
-                <div className="relative aspect-[4/5] bg-[#222] rounded-sm mb-4 overflow-hidden">
+                <div className="relative aspect-[4/5] bg-[#222] rounded-sm mb-4 overflow-hidden group">
                   {/* Bestseller Badge */}
                   <div className="absolute top-3 left-3 z-10 bg-[#e5ff00] text-black text-[10px] font-bold px-2 py-1 rounded-sm uppercase">
                     Bestseller
@@ -135,7 +288,7 @@ export const BestSellers = () => {
                   <img 
                     src={product.image} 
                     alt={product.name} 
-                    className="w-full h-full object-contain p-4 transition-transform duration-500 hover:scale-105"
+                    className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
 
@@ -147,34 +300,26 @@ export const BestSellers = () => {
                   
                   <div className="w-full flex flex-col md:flex-row items-start justify-between mb-2 md:gap-4 gap-2">
                     <div className='flex-1 min-h-12 flex items-start'>
-                        <h3 className=" text-xl font-semibold line-clamp-2 leading-tight overflow-hidden text-ellipsis break-all hyphens-auto text-white">
+                        <h3 className=" text-xl font-semibold line-clamp-2 leading-tight overflow-hidden text-ellipsis break-words text-white">
                         {product.name}
                         </h3>
                     </div>
                     <div className=" text-xl font-bold whitespace-nowrap leading-tight flex-shrink-0 mt-0 flex items-center gap-2 text-white md:text-white/60">
-                      <span className="line-through text-slate-400 leading-none">
-                        {product.oldPrice}
-                      </span>
                       <span className="">
                         {product.price}
                       </span>
                     </div>
                   </div>
 
-                  {/* <p className="text-[12px] line-clamp-4 mb-6 flex-1 min-h-[4rem] text-gray-400">
-                    {product.description}
-                  </p> */}
-
                   {/* Add to Cart Button */}
-                  <button className="w-full bg-[#e5ff00] hover:bg-[#cce600] text-black font-black uppercase text-xs py-3 rounded-sm transition-colors mt-auto">
-                    ADD TO CART
-                  </button>
+                  <Link to={product.link} className="w-full bg-[#e5ff00] hover:bg-[#cce600] text-black font-black uppercase text-xs py-3 rounded-sm transition-colors mt-4 text-center">
+                    VIEW DETAILS
+                  </Link>
                 </div>
               </div>
-            // </SwiperSlide>
+            </SwiperSlide>
           ))}
-        </div>
-        {/* </Swiper> */}
+        </Swiper>
       </div>
     </section>
   );
