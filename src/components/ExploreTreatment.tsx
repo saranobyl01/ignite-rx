@@ -2,15 +2,15 @@ import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import weightloss from "../assets/weight_loss.webp";
+import weightloss from "../assets/weightloss_new.jpg";
 import metabolic from "../assets/weight_loss.webp";
-import performance from "../assets/Performance.webp";
+import performance from "../assets/sermorelin_new.jpg";
 import longivity from "../assets/Performance.webp";
-import cardio from "../assets/Cardiovascular.webp";
+import cardio from "../assets/metformin_new.jpg";
 import hairloss from "../assets/HairLoss.webp";
 import lifestyle from "../assets/lifestyle.webp";
 import skincare from "../assets/Skincare.webp";
-import stopsmoking from "../assets/stop_smoking.webp";
+import stopsmoking from "../assets/smoking_new.jpg";
 
 
 // Import Swiper styles
