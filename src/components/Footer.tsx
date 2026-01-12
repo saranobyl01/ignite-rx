@@ -14,7 +14,7 @@ export const Footer = () => {
         {/* Top Section: Logo and Certification */}
         <div className="flex flex-col-reverse md:flex-row justify-between items-center md:items-start mb-16 gap-8">
           <div className="">
-            <img src={logo} alt="" className=' invert h-20 md:h-[150px]'/>
+            <img src={logo} alt="" className='h-20 md:h-[150px]'/>
             <p className="text-[10px] tracking-[2.5px] uppercase font-bold text-white mt-2">
               Take control of your health journey
             </p>
@@ -34,13 +34,13 @@ export const Footer = () => {
           {/* Contact info */}
           <div className=" flex flex-col gap-1">
             <div className='flex space-x-2 mb-4 md:justify-start justify-center '>
-              <a href="#" className=" bg-[#e5ff00]  flex items-center  text-black hover:scale-110 transition-transform">
+              <a href="#" className=" bg-[#ef0200]  flex items-center  text-black hover:scale-110 transition-transform">
                 <Instagram size={20} />
               </a>
             </div>
             <div className="flex flex-col gap-1">
               <span className="text-sm text-gray-500 font-bold uppercase tracking-widest">Need help?</span>
-              <a href="mailto:support@algorx.ai" className="text-sm md:text-lg font-bold hover:text-[#e5ff00] transition-colors">
+              <a href="mailto:support@algorx.ai" className="text-sm md:text-lg font-bold hover:text-[#ef0200] transition-colors">
                 SUPPORT@ALGORX.AI
               </a>
             </div>

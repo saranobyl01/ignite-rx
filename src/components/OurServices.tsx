@@ -48,14 +48,14 @@ export const OurServices = () => {
       {/* Decorative Yellow Lines (Background) */}
       <div className="absolute inset-0 pointer-events-none opacity-40">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <path d="M-10 80 L30 20 M70 100 L110 40" stroke="#e5ff00" strokeWidth="0.1" fill="none" />
+          <path d="M-10 80 L30 20 M70 100 L110 40" stroke="#ef0200" strokeWidth="0.1" fill="none" />
         </svg>
       </div>
 
       <div className="container mx-auto relative z-10 px-0 md:px-[2rem]">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-[#e5ff00] text-xs font-black tracking-[0.3em] uppercase mb-4 block">
+          <span className="text-[#ef0200] text-xs font-black tracking-[0.3em] uppercase mb-4 block">
             OUR SERVICES
           </span>
           <h2 className="text-4xl md:text-[80px] md:leading-[90px] font-extrabold leading-tight max-w-3xl mx-auto mb-6">

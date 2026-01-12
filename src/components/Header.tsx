@@ -39,7 +39,7 @@ export const Header = () => {
             </button>
             <Link to="/" className="flex items-center">
               <span className="text-2xl font-bold tracking-tighter ">
-               <img src={logo} alt="" className='h-12 invert' />
+               <img src={logo} alt="" className='h-12' />
               </span>
             </Link>
           </div>
@@ -168,7 +168,7 @@ export const Header = () => {
 
           {/* Right side: Icons */}
           <div className="flex items-center gap-5 text-white">
-            <Link to="/" className="hidden md:block bg-[#e5ff00] hover:bg-[#cce600] text-black text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-sm transition-colors">
+            <Link to="/" className="hidden md:block bg-[#ef0200] hover:bg-[#cc0000] text-black text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-sm transition-colors">
               See If I Qualify
             </Link>
             <button className="hover:opacity-70 transition">
