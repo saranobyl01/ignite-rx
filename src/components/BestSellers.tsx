@@ -279,7 +279,7 @@ export const BestSellers = () => {
                 {/* Image Container */}
                 <div className="relative aspect-[4/5] bg-[#222] rounded-sm mb-4 overflow-hidden group">
                   {/* Bestseller Badge */}
-                  <div className="absolute top-3 left-3 z-10 bg-[#ef0200] text-black text-[10px] font-bold px-2 py-1 rounded-sm uppercase">
+                  <div className="absolute top-3 left-3 z-10 bg-[#f17625] text-black text-[10px] font-bold px-2 py-1 rounded-sm uppercase">
                     Bestseller
                   </div>
                   
@@ -310,7 +310,7 @@ export const BestSellers = () => {
                   </div>
 
                   {/* Add to Cart Button */}
-                  <Link to={product.link} className="w-full bg-[#ef0200] hover:bg-[#cc0000] text-black font-black uppercase text-xs py-3 rounded-sm transition-colors mt-4 text-center">
+                  <Link to={product.link} className="w-full bg-[#f17625] hover:bg-[#d15e14] text-black font-black uppercase text-xs py-3 rounded-sm transition-colors mt-4 text-center">
                     VIEW DETAILS
                   </Link>
                 </div>

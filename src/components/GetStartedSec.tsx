@@ -9,7 +9,7 @@ export const GetStartedSec = () => {
         <div className="relative group max-w-3xl">
           <h2 className="text-[50px] text-center md:text-left md:text-[120px] font-black uppercase md:leading-[130px] leading-[53px]">
             READY TO <br />
-            <span className="text-[#ef0200]">PUSH PAST</span> <br />
+            <span className="text-[#f17625]">PUSH PAST</span> <br />
             AVERAGE?
           </h2>
 
@@ -19,7 +19,7 @@ export const GetStartedSec = () => {
               viewBox="0 0 500 20" 
               fill="none" 
               xmlns="http://www.w3.org/2000/svg"
-              className="w-full h-auto text-[#ef0200] opacity-80"
+              className="w-full h-auto text-[#f17625] opacity-80"
             >
               <path 
                 d="M5 5 C 150 2, 350 15, 495 8" 
@@ -45,7 +45,7 @@ export const GetStartedSec = () => {
 
         {/* Right Side: Button */}
         <div className="shrink-0">
-          <button className="bg-[#ef0200] hover:bg-[#cc0000] text-black text-sm md:text-base font-black uppercase px-10 py-5 rounded-sm transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(239,2,0,0.2)]">
+          <button className="bg-[#f17625] hover:bg-[#d15e14] text-black text-sm md:text-base font-black uppercase px-10 py-5 rounded-sm transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(241,118,37,0.2)]">
             Get Started
           </button>
         </div>

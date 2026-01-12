@@ -68,7 +68,7 @@ export const TestimonialSection = () => {
         
         {/* Header Section */}
         <div className="text-center mb-16">
-          <span className="text-[#ef0200] text-xs font-black tracking-[0.3em] uppercase mb-4 block">
+          <span className="text-[#f17625] text-xs font-black tracking-[0.3em] uppercase mb-4 block">
             TESTIMONIALS
           </span>
           <h2 className="text-4xl md:text-[80px] md:leading-[90px] font-extrabold leading-tight mb-6">

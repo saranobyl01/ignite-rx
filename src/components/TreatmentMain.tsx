@@ -150,7 +150,7 @@ export const TreatmentMain = () => {
               <div key={product.id} className="flex flex-col group">
                 <div className="relative aspect-square bg-[#999999] mb-4 overflow-hidden">
                   {product.bestseller && (
-                    <span className="absolute top-2 left-2 bg-[#ef0200] text-[10px] font-black uppercase px-2 py-1 z-10">Bestseller</span>
+                    <span className="absolute top-2 left-2 bg-[#f17625] text-[10px] font-black uppercase px-2 py-1 z-10">Bestseller</span>
                   )}
                   <img src={product.image} alt={product.name} className="w-full h-full object-contain p-8 group-hover:scale-105 transition-transform" />
                 </div>
@@ -167,7 +167,7 @@ export const TreatmentMain = () => {
                     </div>
                   </div>
                   <p className="text-xs text-gray-500 line-clamp-3 mb-6 leading-relaxed">{product.desc}</p>
-                  <button className="w-full bg-black text-white font-bold uppercase py-4 text-xs tracking-widest mt-auto hover:bg-[#ef0200] hover:text-black transition-colors rounded-[4px]">
+                  <button className="w-full bg-black text-white font-bold uppercase py-4 text-xs tracking-widest mt-auto hover:bg-[#f17625] hover:text-black transition-colors rounded-[4px]">
                     Add to Cart
                   </button>
                 </div>

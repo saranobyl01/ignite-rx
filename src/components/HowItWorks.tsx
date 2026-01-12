@@ -89,7 +89,7 @@ const HowItWorks = () => {
           {/* Repeat items enough times to fill the loop buffer */}
           {[...scrollTexts, ...scrollTexts].map((text, idx) => (
             <SwiperSlide key={idx} className="!w-auto">
-              <span className="text-[#ef0200] font-black text-sm md:text-lg tracking-[0.2em] uppercase whitespace-nowrap">
+              <span className="text-[#f17625] font-black text-sm md:text-lg tracking-[0.2em] uppercase whitespace-nowrap">
                 {text}
               </span>
             </SwiperSlide>
@@ -100,7 +100,7 @@ const HowItWorks = () => {
       {/* 4. Solution & Steps Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 container mx-auto">
         {/* Solution Box */}
-        <div className="bg-[#ef0200] p-4 md:p-24 flex flex-col justify-center items-center text-center">
+        <div className="bg-[#f17625] p-4 md:p-24 flex flex-col justify-center items-center text-center">
           <h3 className="text-black text-4xl md:text-5xl font-bold uppercase mb-8 tracking-tighter">
             {/* SOLUTION */}
             How to order ?
@@ -122,7 +122,7 @@ const HowItWorks = () => {
           <div className="space-y-8">
             {steps.map((step) => (
               <div key={step.id} className="flex items-start gap-6">
-                <div className="bg-[#ef0200] text-black w-10 h-10 flex items-center justify-center font-bold shrink-0">
+                <div className="bg-[#f17625] text-black w-10 h-10 flex items-center justify-center font-bold shrink-0">
                   {step.id}
                 </div>
                 <div>
