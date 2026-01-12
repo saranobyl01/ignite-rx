@@ -4,10 +4,10 @@ import { Navigation, Pagination } from 'swiper/modules';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Images
-import weightLoss from "../assets/aweight_loss.webp";
-import longevity from "../assets/longevity_focus.webp";
-import sexualHealth from "../assets/performance_solutions.webp"; // Using performance solutions for Sexual Health
-import hairLoss from "../assets/HairLoss.webp";
+import weightLoss from "../assets/weightloss_treatment.jpg";
+import longevity from "../assets/longevity_treatment.jpg";
+import sexualHealth from "../assets/sexual_treatment.jpg"; // Using performance solutions for Sexual Health
+import hairLoss from "../assets/hairloss_treatment.jpg";
 import beauty from "../assets/Skincare.webp";
 import lifestyle from "../assets/lifestyle.webp";
 

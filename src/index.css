@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /* 
   Black & White Design System
@@ -15,12 +15,14 @@
 
     /* font */
 
-     --font-inter: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
+    --font-primary: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont,
       'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 
     /* Core Colors */
-    --background: 0 0% 100%;        /* White */
-    --foreground: 0 0% 0%;          /* Black */
+    --background: 0 0% 100%;
+    /* White */
+    --foreground: 0 0% 0%;
+    /* Black */
 
     --card: 0 0% 100%;
     --card-foreground: 0 0% 0%;
@@ -111,20 +113,24 @@
 
   body {
     @apply bg-background text-foreground;
-     font-family: var(--font-inter);
+    font-family: var(--font-primary);
   }
 }
-	
-.slick-slide > div {
+
+.slick-slide>div {
   height: 100%;
 }
+
 /* This targets the moving part of the progress bar */
 
 .best-pagination2 .swiper-pagination-progressbar-fill {
-  background-color: white !important; /* Replace with your specific color */
+  background-color: white !important;
+  /* Replace with your specific color */
 }
+
 .best-pagination3 .swiper-pagination-progressbar-fill {
-  background-color: white !important; /* Replace with your specific color */
+  background-color: white !important;
+  /* Replace with your specific color */
 }
 
 
@@ -134,4 +140,3 @@
 }
 
 /* Optional: Custom slow float animation for the bottle */
-

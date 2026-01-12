@@ -1,7 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
-import bottle from "../assets/how_bottle.webp";
+import bottle from "../assets/vial.png";
 
 // Import Swiper styles
 import 'swiper/css';
