@@ -286,7 +286,7 @@ export const BestSellers = () => {
                   <img 
                     src={product.image} 
                     alt={product.name} 
-                    className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-contain p-0 transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
 

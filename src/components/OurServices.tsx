@@ -8,8 +8,8 @@ import weightLoss from "../assets/weightloss_treatment.jpg";
 import longevity from "../assets/longevity_treatment.jpg";
 import sexualHealth from "../assets/sexual_treatment.jpg"; // Using performance solutions for Sexual Health
 import hairLoss from "../assets/hairloss_treatment.jpg";
-import beauty from "../assets/Skincare.webp";
-import lifestyle from "../assets/lifestyle.webp";
+import beauty from "../assets/beauty_treatment.jpg";
+import lifestyle from "../assets/lifestyle_treatment.jpg";
 
 // Import Swiper styles
 import 'swiper/css';
@@ -19,26 +19,32 @@ const services = [
   {
     title: "WEIGHT LOSS",
     image: weightLoss,
+    color: 'border-purple-500',
   },
   {
     title: "LONGEVITY & ANTI-AGING",
     image: longevity,
+    color: 'border-[#adc1d9]',
   },
   {
     title: "SEXUAL HEALTH",
     image: sexualHealth,
+    color: 'border-red-500',
   },
   {
     title: "HAIR LOSS",
     image: hairLoss,
+    color: 'border-blue-500',
   },
   {
     title: "BEAUTY",
     image: beauty,
+    color: 'border-pink-300',
   },
   {
     title: "LIFESTYLE",
     image: lifestyle,
+    color: 'border-white',
   }
 ];
 
@@ -113,19 +119,20 @@ export const OurServices = () => {
 };
 
 // Reusable Card Component
+// Reusable Card Component
 const ServiceCard = ({ service }) => (
-  <div className="relative aspect-[3/4] rounded-xl overflow-hidden group bg-[#111] border border-white/5">
+  <div className={`relative aspect-[3/4] rounded-xl overflow-hidden group bg-[#111] border border-white/5 border-b-[10px] ${service.color}`}>
     {/* Dark Overlaid Background Image */}
     <img
       src={service.image}
       alt={service.title}
-      className="absolute inset-0 w-full h-full object-cover  group-hover:scale-110 group-hover:opacity-60 transition-all duration-700"
+      className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 group-hover:opacity-60 transition-all duration-700"
     />
     <div className="absolute inset-0 bg-black/40" />
 
     {/* Content */}
-    <div className="absolute inset-0 p-4 md:p-8 flex flex-col justify-start">
-      <h3 className="text-xl font-black leading-tight tracking-tight mb-auto max-w-[150px]">
+    <div className="absolute bottom-8 left-6 right-6 flex flex-col items-center">
+      <h3 className="text-2xl font-bold md:text-[40px] md:font-extrabold leading-tight tracking-[-0.8px] md:tracking-[-1.6px] text-white text-center">
         {service.title}
       </h3>
     </div>
