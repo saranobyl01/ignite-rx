@@ -5,11 +5,11 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import weightloss from "../assets/weightloss_new.jpg";
 import metabolic from "../assets/weight_loss.webp";
 import performance from "../assets/sermorelin_new.jpg";
-import longivity from "../assets/longevity_treatment.jpg";
+import longivity from "../assets/longevity_treatment2.jpg";
 import cardio from "../assets/metformin_new.jpg";
-import hairloss from "../assets/hairloss_treatment.jpg";
-import lifestyle from "../assets/lifestyle_treatment.jpg";
-import skincare from "../assets/beauty_treatment.jpg";
+import hairloss from "../assets/hairloss_treatment2.jpg";
+import lifestyle from "../assets/lifestyle_treatment2.jpg";
+import skincare from "../assets/skincare_treatment2.jpg";
 import stopsmoking from "../assets/smoking_new.jpg";
 
 
