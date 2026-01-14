@@ -50,7 +50,7 @@ const services = [
 
 export const OurServices = () => {
   return (
-    <section className="bg-black text-white py-24 px-6 relative overflow-hidden md:pt-40">
+    <section className="bg-white text-black py-24 px-6 relative overflow-hidden md:pt-40">
       {/* Decorative Yellow Lines (Background) */}
       <div className="absolute inset-0 pointer-events-none opacity-40">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -68,7 +68,7 @@ export const OurServices = () => {
           CARE DESIGNED AROUND YOU
 
           </h2>
-          <p className="text-white/60 text-2xl md:text-[24px] font-bold  leading-relaxed">
+          <p className="text-black/60 text-2xl md:text-[24px] font-bold  leading-relaxed">
           Prescription treatments guided by licensed healthcare professionals          </p>
         </div>
 
@@ -99,18 +99,22 @@ export const OurServices = () => {
             ))}
 
             <div className="flex items-center gap-6 w-[180px] mt-6">
-              <button className="best-prev text-gray-500 hover:text-white">
+              <button className="best-prev text-gray-400 hover:text-black">
                 <ChevronLeft size={28} />
               </button>
 
-              <div className="flex-1 h-[2.5px] bg-gray-400 relative min-w-[80px]">
-                <div className="best-pagination3 absolute top-0 left-0 h-full bg-gray-500 transition-all duration-300 [&_.swiper-pagination-progressbar-fill]:bg-white" />
+              <div className="flex-1 h-[2.5px] bg-gray-200 relative min-w-[80px]">
+                <div
+                  className="best-pagination3 absolute inset-0
+                            [&_.swiper-pagination-progressbar-fill]:!bg-black"
+                />
               </div>
 
-              <button className="best-next text-gray-500 hover:text-white">
+              <button className="best-next text-gray-400 hover:text-black">
                 <ChevronRight size={28} />
               </button>
             </div>
+
           </Swiper>
         </div>
       </div>
@@ -121,18 +125,18 @@ export const OurServices = () => {
 // Reusable Card Component
 // Reusable Card Component
 const ServiceCard = ({ service }) => (
-  <div className={`relative aspect-[3/4] rounded-xl overflow-hidden group bg-[#111] border border-white/5 border-b-[10px] ${service.color}`}>
+  <div className={`relative aspect-[3/4] rounded-xl overflow-hidden group bg-white border border-black/5 border-b-[10px] ${service.color}`}>
     {/* Dark Overlaid Background Image */}
     <img
       src={service.image}
       alt={service.title}
       className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 group-hover:opacity-60 transition-all duration-700"
     />
-    <div className="absolute inset-0 bg-black/40" />
+    <div className="absolute inset-0 bg-white/10 group-hover:bg-transparent transition-all duration-500" />
 
     {/* Content */}
-    <div className="absolute bottom-8 left-6 right-6 flex flex-col items-center">
-      <h3 className="text-2xl font-bold md:text-[40px] md:font-extrabold leading-tight tracking-[-0.8px] md:tracking-[-1.6px] text-white text-center">
+    <div className="absolute bottom-6 left-4 right-4 flex flex-col items-center">
+      <h3 className="text-xl font-bold md:text-[32px] md:font-extrabold leading-tight tracking-[-0.8px] md:tracking-[-1.6px] text-black bg-white/60 backdrop-blur-md py-2 px-6 rounded-full w-full text-center">
         {service.title}
       </h3>
     </div>

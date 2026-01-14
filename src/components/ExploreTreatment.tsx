@@ -38,29 +38,33 @@ export const ExploreTreatment = () => {
   const paginationRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section className="bg-black text-white py-8 md:py-24 px-6 md:px-4">
+    <section className="bg-white text-black py-8 md:py-24 px-6 md:px-4">
       <div className="flex flex-col relative">
         
         {/* Header with Navigation and Progress */}
         <div className="container mx-auto px-0 flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 px-6 md:px-12">
-          <h2 className="text-3xl md:text-[40px] tracking-[-1.6px] font-bold text-white">
+          <h2 className="text-3xl md:text-[40px] tracking-[-1.6px] font-bold text-black">
             CHOOSE YOUR TREATMENT
           </h2>
 
           {/* Controls Container */}
           <div className="flex items-center gap-6 min-w-[200px] mt-6 md:mt-0">
             {/* Custom Prev Arrow */}
-            <button ref={prevRef} className="text-gray-500 hover:text-white transition">
+            <button ref={prevRef} className="text-gray-400 hover:text-black transition">
               <ChevronLeft size={32} strokeWidth={1} />
             </button>
 
             {/* Progress Bar Container */}
-            <div className="flex-1 h-[2.5px] bg-gray-400 relative min-w-[80px]">
-              <div ref={paginationRef} className="absolute top-0 left-0 h-full bg-gray-500 transition-all duration-300 [&_.swiper-pagination-progressbar-fill]:bg-white" />
+            <div className="flex-1 h-[2.5px] bg-gray-200 relative min-w-[80px]">
+              <div
+                ref={paginationRef}
+                className="absolute inset-0
+                          [&_.swiper-pagination-progressbar-fill]:!bg-black"
+              />
             </div>
 
             {/* Custom Next Arrow */}
-            <button ref={nextRef} className="text-gray-500 hover:text-white transition">
+            <button ref={nextRef} className="text-gray-400 hover:text-black transition">
               <ChevronRight size={32} strokeWidth={1} />
             </button>
           </div>
@@ -104,11 +108,10 @@ export const ExploreTreatment = () => {
                 />
                 
                 {/* Title and Colored Border Bottom */}
-                <div className="absolute bottom-8 left-6 right-6 flex flex-col items-center">
-                  <h3 className="text-2xl font-bold md:text-[40px] md:font-extrabold leading-tight tracking-[-0.8px] md:tracking-[-1.6px] text-white">
+                <div className="absolute bottom-4 left-4 right-4 flex flex-col items-center">
+                  <h3 className="text-xl font-bold md:text-[32px] md:font-extrabold leading-tight tracking-[-0.8px] md:tracking-[-1.6px] text-black bg-white/60 backdrop-blur-md py-2 px-6 rounded-full w-full text-center">
                     {item.title}
                   </h3>
-
                 </div>
               </div>
             </SwiperSlide>

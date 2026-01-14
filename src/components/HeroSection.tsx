@@ -9,7 +9,7 @@ export const HeroSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative h-screen w-full flex items-end justify-end overflow-hidden pb-12 md:pb-20">
+    <section className="relative h-screen w-full flex items-end overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
@@ -27,8 +27,8 @@ export const HeroSection = () => {
       </div>
 
       {/* Content Container */}
-      <div className="container relative z-10 mx-auto px-6 md:px-12 flex justify-end">
-        <div className="max-w-6xl text-white text-right">
+      <div className="container relative z-10 mx-auto px-6 md:px-12 flex justify-start">
+        <div className="max-w-6xl text-white text-left">
           
           {/* Rating / Social Proof */}
           {/* <div className="flex items-center gap-4">
@@ -46,15 +46,12 @@ export const HeroSection = () => {
           <h1 className="text-5xl  lg:text-[120px] font-extrabold tracking-[-2px] md:tracking-[-4.8px]  md:leading-[120px] my-4 uppercase">
           Lose Your Weight Easily
           </h1>
-          {/* <h1 className="text-5xl  lg:text-[120px] font-extrabold tracking-[-2px] md:tracking-[-4.8px]  md:leading-[120px] my-4 uppercase">
-            PERFORMANCE <br />
-            MEDICINE & LABS
-          </h1> */}
+         
 
           {/* Subheadline */}
-          {/* <p className="text-lg md:text-xl lg:text-[20px] mb-6 md:mb-10 font-inter font-normal">
+          <p className="text-lg md:text-xl lg:text-[20px] mb-6 md:mb-10 font-inter font-normal">
             Medications & Labs to fuel your performance
-          </p> */}
+          </p>
 
           {/* Action Buttons */}
           {/* <div className="flex flex-col sm:flex-row gap-4">

@@ -8,6 +8,7 @@ import { GetStartedSec } from '@/components/GetStartedSec'
 import { Header } from '@/components/Header'
 import { HeroSection } from '@/components/HeroSection'
 import HowItWorks from '@/components/HowItWorks'
+import HowToOrder from '@/components/HowToOrder'
 import { OurServices } from '@/components/OurServices'
 import { TestimonialSection } from '@/components/TestimonialSection'
 import TrustBar from '@/components/TrustBar'
@@ -24,6 +25,7 @@ const Home = () => {
         <BestSellers/>
         {/* <TrustSection/> */}
         <HowItWorks/>
+        <HowToOrder/>
         <OurServices/>
         {/* <TestimonialSection/> */}
 
