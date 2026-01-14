@@ -21,17 +21,27 @@ const Propranolol = () => {
     }
   ];
 
+  const pricingPlans = [
+    {
+      id: "68",
+      name: "Propranolol 20mg - 90 tablets",
+      price: "87",
+      duration: "90 days supply"
+    }
+  ];
+
   return (
     <div>
-        <HeaderBlack/>
-        <ProductHero
-            protocol="Performance Support"
-            productName="PROPRANOLOL"
-            tagline="Calm Under Pressure"
-            price="87.00"
-            image={bottle}
-            onAddToCart={(item) => addToCart({ ...item, image: bottle })}
-        />
+      <HeaderBlack />
+      <ProductHero
+        protocol="Performance Support"
+        productName="PROPRANOLOL 20MG"
+        tagline="Calm Under Pressure"
+        additionalInfo="TAKE 1 TABLET DAILY AS NEEDED"
+        pricingPlans={pricingPlans}
+        image={bottle}
+        onAddToCart={(item) => addToCart({ ...item, image: bottle })}
+      />
         <TrustBadges/>
         <ProductDescription
             title="What is Propranolol?"

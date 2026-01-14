@@ -117,7 +117,7 @@ const ProductHero = ({
                             className={`px-4 py-3 rounded-lg text-sm transition-all w-full ${
                               selectedMedicationIndex === index
                                 ? "bg-black text-white border-2 border-primary"
-                                : "bg-secondary border border-border hover:bg-secondary/80"
+                                : "bg-white text-black border border-border hover:bg-gray-50"
                             }`}
                           >
                             <div className="text-center">
@@ -149,7 +149,7 @@ const ProductHero = ({
                             className={`px-4 py-3 rounded-lg text-sm font-medium transition-all ${
                               selectedPlanIndex === index
                                 ? "bg-black text-white border-2 border-primary"
-                                : "bg-secondary border border-border hover:bg-secondary/80"
+                                : "bg-white text-black border border-border hover:bg-gray-50"
                             }`}
                           >
                             {plan.duration}

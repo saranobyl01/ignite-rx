@@ -25,17 +25,26 @@ const B12 = () => {
     "Doctor-guided and customizable based on your levels",
     "Safe, simple, and non-stimulant"
   ];
+  const pricingPlans = [
+    {
+      id: "45",
+      name: "B12 - 2 month",
+      price: "50",
+      duration: "2 months"
+    }
+  ];
+
   return (
     <div>
-        <HeaderBlack/>
-        <ProductHero
+      <HeaderBlack />
+      <ProductHero
         protocol="LONGEVITY & VITALITY"
         productName="B12"
         tagline="Endurance and focus, naturally."
-        price="50.00"
+        pricingPlans={pricingPlans}
         image={bottle}
         onAddToCart={(item) => addToCart({ ...item, image: bottle })}
-        />
+      />
          <TrustBadges isDark={false} />
         <ProductDescription
         title="What Is B12 Injection Therapy?"

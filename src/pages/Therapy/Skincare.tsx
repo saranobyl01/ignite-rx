@@ -28,46 +28,55 @@ const Skincare = () => {
     "Improves Skin Structure",
     "Dermatologist Tested & Formulated"
   ];
-    const antiAgingVariants = [
+  const antiAgingVariants = [
     { 
-      name: "NOVICE", 
+      name: "Anti-Aging NOVICE", 
       description: "TRETINOIN 0.03%, NIACINAMIDE 4%, HYALURONIC ACID 0.5%",
-      productId: 23,
-      price: 89
+      productId: "49",
+      price: 89,
+      duration: "3 months supply"
     },
     { 
-      name: "INTERMEDIATE", 
+      name: "Anti-Aging INTERMEDIATE", 
       description: "TRETINOIN 0.06%, NIACINAMIDE 4%, HYALURONIC ACID 0.5%",
-      productId: 143,
-      price: 89
+      productId: "50",
+      price: 89,
+      duration: "3 months supply"
     },
     { 
-      name: "PRO", 
+      name: "Anti-Aging PRO", 
       description: "TRETINOIN 0.089%, NIACINAMIDE 4%, HYALURONIC ACID 0.5%",
-      productId: 144,
-      price: 89
+      productId: "51",
+      price: 89,
+      duration: "3 months supply"
     }
   ];
+
   const darkSpotsVariants = [
     { 
-      name: "NOVICE", 
+      name: "Dark Spots NOVICE", 
       description: "HYDROQUINONE 6%, VITAMIN C 1%, NIACINAMIDE 2%",
-      productId: 145,
-      price: 89
+      productId: "52",
+      price: 89,
+      duration: "3 months supply"
     },
     { 
-      name: "INTERMEDIATE", 
+      name: "Dark Spots INTERMEDIATE", 
       description: "HYDROQUINONE 8%, TRETINOIN 0.025%, VITAMIN C 1%, NIACINAMIDE 2%",
-      productId: 146,
-      price: 89
+      productId: "53",
+      price: 89,
+      duration: "3 months supply"
     },
     { 
-      name: "PRO", 
+      name: "Dark Spots PRO", 
       description: "HYDROQUINONE 12%, TRETINOIN 0.05%, NIACINAMIDE 2%, HYDROCORTISONE 2.5%",
-      productId: 147,
-      price: 89
+      productId: "54",
+      price: 89,
+      duration: "3 months supply"
     }
   ];
+
+  const allSkincareVariants = [...antiAgingVariants, ...darkSpotsVariants];
 
     const faqItems = [
     {
@@ -115,10 +124,11 @@ const Skincare = () => {
     <div>
         <HeaderBlack/>
         <ProductHero
-            protocol="TRETINOIN, NIACINAMIDE, HYALURONIC ACID"
+            protocol="Skin Care"
             productName="Skincare"
             tagline="Dermatologist formulated for younger skin!"
-            price="89.00"
+            additionalInfo="APPLY TO AFFECTED AREAS ONCE A DAY"
+            medicationVariants={allSkincareVariants}
             image={cream}
             onAddToCart={(item) => addToCart({ ...item, image: cream })}
         />
@@ -172,7 +182,16 @@ const Skincare = () => {
                         
                         ))}
                     </div>
-                    <button  className="w-full lg:w-auto px-8 md:px-12 lg:px-14 py-3.5 md:py-4 bg-black text-white flex gap-3 font-medium tracking-wide text-sm md:text-base rounded-full transition-all duration-300 active:scale-95 border border-white" >
+                    <button 
+                      onClick={() => addToCart({
+                        name: antiAgingVariants[0].name,
+                        price: `$${antiAgingVariants[0].price}`,
+                        category: "Skin Care",
+                        id: antiAgingVariants[0].productId,
+                        image: cream
+                      })}
+                      className="w-full lg:w-auto px-8 md:px-12 lg:px-14 py-3.5 md:py-4 bg-black text-white flex gap-3 font-medium tracking-wide text-sm md:text-base rounded-full transition-all duration-300 active:scale-95 border border-white" 
+                    >
                         Get Started <ArrowRight/>
                     </button>
                     </div>
@@ -252,7 +271,16 @@ const Skincare = () => {
                      
                     ))}
                   </div>
-                    <button  className="w-full lg:w-auto px-8 md:px-12 lg:px-14 py-3.5 md:py-4 bg-black text-white flex gap-3 font-medium tracking-wide text-sm md:text-base rounded-full transition-all duration-300 active:scale-95  border border-white" >
+                    <button 
+                      onClick={() => addToCart({
+                        name: darkSpotsVariants[0].name,
+                        price: `$${darkSpotsVariants[0].price}`,
+                        category: "Skin Care",
+                        id: darkSpotsVariants[0].productId,
+                        image: cream
+                      })}
+                      className="w-full lg:w-auto px-8 md:px-12 lg:px-14 py-3.5 md:py-4 bg-black text-white flex gap-3 font-medium tracking-wide text-sm md:text-base rounded-full transition-all duration-300 active:scale-95  border border-white" 
+                    >
                         Get Started <ArrowRight/>
                     </button>
                     </div>
