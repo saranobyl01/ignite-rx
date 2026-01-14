@@ -27,7 +27,7 @@ const treatments = [
   { id: 4, title: 'Stop Smoking', image: stopsmoking, color: 'border-yellow-500' },
   // { id: 4, title: 'Metabolic', image: metabolic, color: 'border-yellow-500' },
   { id: 5, title: 'Hair Loss', image: hairloss, color: 'border-blue-500' },
-  { id: 6, title: 'Lifestyle', image: lifestyle, color: 'border-white' },
+  { id: 6, title: 'Lifestyle', image: lifestyle, color: 'border-black' },
   { id: 7, title: 'Longevity', image: longivity, color: 'border-[#adc1d9]' },
   { id: 8, title: 'Skincare', image: skincare, color: 'border-pink-300' },
 ];
