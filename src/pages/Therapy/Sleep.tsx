@@ -7,18 +7,20 @@ import sleep1 from "../../assets/therapy images/sleep (1).jpg"
 import sleep2 from "../../assets/therapy images/sleep (2).jpg"
 import sleep3 from "../../assets/therapy images/sleep (3).jpg"
 import ProductDescription from '@/components/Products/ProductDescription'
+import { useCart } from '@/context/CartContext'
 
 const Sleep = () => {
+    const { addToCart } = useCart();
       const medicationVariants = [
     {
-      name: "Trazodone 50mg",
+      name: "Trazodone 50mg (3 Month)",
       price: 90.00,
-      productId: 19
+      productId: "90"
     },
     {
-      name: "Ramelteon 3mg",
+      name: "Ramelteon 3mg (3 Month)",
       price: 150.00,
-      productId: 137
+      productId: "91"
     }
   ];
 const benefits = [
@@ -43,7 +45,10 @@ const benefits = [
             tagline="Get your best sleep in years!"
             medicationVariants={medicationVariants}
             image={bottle}
-            // onAddToCart={handleAddToCart}
+            onAddToCart={(item) => addToCart({
+              ...item,
+              image: bottle
+            })}
 
         />
         <ProductDescription

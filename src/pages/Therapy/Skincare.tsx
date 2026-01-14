@@ -8,8 +8,11 @@ import { ArrowRight, Check } from 'lucide-react'
 import skincare1 from "../../assets/therapy images/skincare (1).jpg"
 import skincare2 from "../../assets/therapy images/skincare (2).jpg"
 import ProductFAQ from '@/components/Products/ProductFAQ'
+import { useCart } from '@/context/CartContext'
 
 const Skincare = () => {
+    const { addToCart } = useCart();
+
       const antiAgingBenefits = [
     "Formulated with Tretinoin!",
     "Reduces Fine Lines & Wrinkles",
@@ -117,7 +120,7 @@ const Skincare = () => {
             tagline="Dermatologist formulated for younger skin!"
             price="89.00"
             image={cream}
-            // onAddToCart={handleAddAntiAgingToCart}
+            onAddToCart={(item) => addToCart({ ...item, image: cream })}
         />
         {/* Trust Badges */}
         <TrustBadges />
@@ -260,7 +263,7 @@ const Skincare = () => {
                 </div>
             </div>
         </section>
-        <ProductFAQ items={faqItems} isDark={false} />
+        <ProductFAQ items={faqItems} />
     </div>
   )
 }

@@ -2,6 +2,7 @@ import { HeaderBlack } from '@/components/HeaderBlack';
 import ProductHero from '@/components/Products/ProductHero'
 import { useToast } from '@/hooks/use-toast';
 import React from 'react'
+import { useCart } from '@/context/CartContext';
 import bottle from "../../assets/bottle.png"
 import TrustBadges from '@/components/Products/TrustBadges';
 import { ArrowRight } from 'lucide-react';
@@ -9,22 +10,18 @@ import acidrefluximage from "../../assets/therapy images/acid-reflux.jpg"
 import ProductFAQ from '@/components/Products/ProductFAQ';
 
 const AcidReflux = () => {
-      const { toast } = useToast();
-//   const { addToCart } = useCart();
+    const { addToCart } = useCart();
+    const { toast } = useToast();
 
-//   const handleAddToCart = () => {
-//     addToCart({
-//       id: 'acid-reflux-women',
-//       name: 'Omeprazole (Acid Reflux)',
-//       price: 30,
-//       image: acidRefluxPainImage,
-//       category: 'General Health'
-//     });
-//     toast({
-//       title: "Added to cart",
-//       description: "Omeprazole has been added to your cart",
-//     });
-//   };
+  const pricingPlans = [
+    {
+      name: "Omeprazole 40mg",
+      duration: "90 Quantity (Refills 3)",
+      price: "30.00",
+      id: "89"
+    }
+  ];
+
   return (
     <div>
         <HeaderBlack/>
@@ -32,9 +29,14 @@ const AcidReflux = () => {
         protocol="DIGESTIVE HEALTH"
         productName="Omeprazole"
         tagline="Combat acid reflux effectively with Omeprazole's proven formula"
-        price="30.00"
+        pricingPlans={pricingPlans}
         image={bottle}
-        // onAddToCart={handleAddToCart}
+        onAddToCart={(item) => addToCart({
+            name: item.name,
+            price: item.price,
+            image: bottle,
+            id: item.id
+        })}
         />
         <TrustBadges isDark={false} />
         <section className="py-16 px-4 bg-gradient-to-b from-background to-secondary/30">

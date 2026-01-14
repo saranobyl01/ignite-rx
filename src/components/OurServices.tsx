@@ -17,32 +17,32 @@ import 'swiper/css/pagination';
 
 const services = [
   {
-    title: "WEIGHT LOSS",
+    title: "Weight Loss",
     image: weightLoss,
     color: 'border-purple-500',
   },
   {
-    title: "LONGEVITY & ANTI-AGING",
+    title: "Longevity & Anti-Aging",
     image: longevity,
     color: 'border-[#adc1d9]',
   },
   {
-    title: "SEXUAL HEALTH",
+    title: "Sexual Health",
     image: sexualHealth,
     color: 'border-red-500',
   },
   {
-    title: "HAIR LOSS",
+    title: "Hair Loss",
     image: hairLoss,
     color: 'border-blue-500',
   },
   {
-    title: "BEAUTY",
+    title: "Beauty",
     image: beauty,
     color: 'border-pink-300',
   },
   {
-    title: "LIFESTYLE",
+    title: "Lifestyle",
     image: lifestyle,
     color: 'border-white',
   }

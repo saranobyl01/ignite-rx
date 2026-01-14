@@ -4,6 +4,7 @@ import { GetStartedSec } from "./components/GetStartedSec";
 import { Header } from "./components/Header";
 import Home from "./pages/Home";
 import TreatmentsPage from "./pages/TreatmentsPage";
+import CartPage from "./pages/CartPage";
 import PackageLabs from "./pages/PackageLabs";
 import IndividualLabs from "./pages/IndividualLabs";
 import TestDetails from "./pages/TestDetails";
@@ -29,6 +30,7 @@ import Sleep from "./pages/Therapy/Sleep";
 import StopSmoking from "./pages/Therapy/StopSmoking";
 import TRT from "./pages/Therapy/TRT";
 import WeightLoss from "./pages/Therapy/WeightLoss";
+import ErectileDysfunction from "./pages/Therapy/ErectileDysfunction";
 
 
 import ScrollToTop from "./components/ScrollToTop";
@@ -40,6 +42,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/treatment" element={<TreatmentsPage />} />
+        <Route path="/cart" element={<CartPage />} />
          <Route path="/package-labs" element={<PackageLabs />} />
          <Route path="/individual-labs" element={<IndividualLabs />} />
          <Route path="/individual-labs/:slug" element={<TestDetails />} />
@@ -67,6 +70,7 @@ function App() {
           <Route path="/stop-smoking" element={<StopSmoking/>} />
           <Route path="/trt" element={<TRT/>} />
           <Route path="/weightloss" element={<WeightLoss/>} />
+          <Route path="/erectile-dysfunction" element={<ErectileDysfunction/>} />
       </Routes>
 
  

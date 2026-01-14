@@ -4,8 +4,10 @@ import React from 'react'
 import bottle from "../../assets/bottle.png" // Fallback image
 import TrustBadges from '@/components/Products/TrustBadges'
 import ProductDescription from '@/components/Products/ProductDescription'
+import { useCart } from '@/context/CartContext'
 
 const Propranolol = () => {
+  const { addToCart } = useCart();
   const benefits = [
     "Reduces physical symptoms of performance anxiety (jitters, racing heart)",
     "May support cardiovascular health in specific contexts",
@@ -28,7 +30,7 @@ const Propranolol = () => {
             tagline="Calm Under Pressure"
             price="87.00"
             image={bottle}
-            onAddToCart={()=>{}}
+            onAddToCart={(item) => addToCart({ ...item, image: bottle })}
         />
         <TrustBadges/>
         <ProductDescription

@@ -8,8 +8,10 @@ import glutathione2 from "../../assets/therapy images/glutathione2.jpg"
 import glutathione3 from "../../assets/therapy images/glutathione3.jpg"
 import ProductFAQ from '@/components/Products/ProductFAQ'
 import TrustBadges from '@/components/Products/TrustBadges'
+import { useCart } from '@/context/CartContext';
 
 const Glutathione = () => {
+    const { addToCart } = useCart();
 
     const benefits = [
   {
@@ -90,7 +92,15 @@ const Glutathione = () => {
             tagline="Experience the potential age-restoring benefits of Glutathione!"
             price="57.32"
             image={vial}
-            // onAddToCart={handleAddToCart}
+            pricingPlans={[
+              {
+                duration: "1 Month",
+                label: "1 Month",
+                price: "57.32",
+                id: "42"
+              }
+            ]}
+            onAddToCart={(item) => addToCart({ ...item, image: vial, id: "42" })}
         />
          <TrustBadges  />
 

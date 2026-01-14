@@ -8,8 +8,10 @@ import eyelash from "../../assets/therapy images/eyelash.avif"
 import eyelash1 from "../../assets/therapy images/eyelash2.jpg"
 import eyelash2 from "../../assets/therapy images/eyelash3.jpg"
 import ProductFAQ from '@/components/Products/ProductFAQ'
+import { useCart } from '@/context/CartContext'
 
 const Eyelashes = () => {
+    const { addToCart } = useCart();
     const benefits = [
   {
     title: "Promotes Longer Lashes",
@@ -94,7 +96,7 @@ const Eyelashes = () => {
         tagline="Wake up with beautiful lashes"
         price="129.00"
         image={drop}
-        // onAddToCart={handleAddToCart}
+        onAddToCart={(item) => addToCart({ ...item, image: drop })}
         />
         <TrustBadges  />
 

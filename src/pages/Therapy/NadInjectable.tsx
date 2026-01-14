@@ -7,8 +7,10 @@ import ProductDescription from '@/components/Products/ProductDescription'
 import ProductFAQ from '@/components/Products/ProductFAQ'
 import nadinjection1 from "../../assets/therapy images/nad-injection (1).jpg"
 import nadinjection2 from "../../assets/therapy images/nad-injection (2).jpg"
+import { useCart } from '@/context/CartContext';
 
 const NadInjectable = () => {
+    const { addToCart } = useCart();
       const benefits = [
     "Maintaining healthy NAD+ levels slows down the aging process",
     "May reduce your risk for chronic age-related disease",
@@ -84,7 +86,15 @@ const NadInjectable = () => {
             tagline="Enhance energy levels, mental clarity & mood by supporting DNA health"
             price="199.00"
             image={bottle}
-            // onAddToCart={handleAddToCart}
+            pricingPlans={[
+              {
+                duration: "1 Month",
+                label: "1 Month",
+                price: "199.00",
+                id: "46"
+              }
+            ]}
+            onAddToCart={(item) => addToCart({ ...item, image: bottle, id: "46" })}
         />
 
         {/* Trust Badges */}

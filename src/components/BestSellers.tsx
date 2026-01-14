@@ -15,6 +15,7 @@ import med_cream from "../assets/cream.png";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/pagination';
 
 const products = [
   // Weight Loss
@@ -286,7 +287,7 @@ export const BestSellers = () => {
                   <img 
                     src={product.image} 
                     alt={product.name} 
-                    className="w-full h-full object-contain p-0 transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-contain scale-[1.2] p-0 transition-transform duration-500 group-hover:scale-[1.35]"
                   />
                 </div>
 
@@ -309,6 +310,7 @@ export const BestSellers = () => {
                     </div>
                   </div>
 
+                  {/* Add to Cart Button */}
                   {/* Add to Cart Button */}
                   <Link to={product.link} className="w-full bg-[#f17625] hover:bg-[#d15e14] text-black font-black uppercase text-xs py-3 rounded-sm transition-colors mt-4 text-center">
                     VIEW DETAILS

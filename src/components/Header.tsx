@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown, User, ShoppingCart } from 'lucide-react';
 import logo from "../assets/logo_black.png";
+import { useCart } from '../context/CartContext';
 
 export const Header = () => {
+  const { cartCount } = useCart();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isTreatmentsOpen, setIsTreatmentsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -95,7 +97,7 @@ export const Header = () => {
                       <h3 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-700 pb-2 min-h-[48px] flex items-end">Sexual Health</h3>
                       <div className="flex flex-col gap-2">
                         <Link to="/trt" className="text-xs text-gray-400 hover:text-white transition">TRT</Link>
-                        <Link to="/trt" className="text-xs text-gray-400 hover:text-white transition">Erectile Dysfunction</Link>
+                        <Link to="/erectile-dysfunction" className="text-xs text-gray-400 hover:text-white transition">Erectile Dysfunction</Link>
                         <Link to="/premature-ejaculation" className="text-xs text-gray-400 hover:text-white transition">Premature Ejaculation</Link>
                         <Link to="/pt-141" className="text-xs text-gray-400 hover:text-white transition">PT-141</Link>
                       </div>
@@ -174,9 +176,14 @@ export const Header = () => {
             <button className="hover:opacity-70 transition">
               <User size={20} />
             </button>
-            <button className="hover:opacity-70 transition">
+            <Link to="/cart" className="relative hover:opacity-70 transition">
               <ShoppingCart size={20} />
-            </button>
+              {cartCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-[#f17625] text-black text-[10px] font-bold h-4 w-4 flex items-center justify-center rounded-full">
+                  {cartCount}
+                </span>
+              )}
+            </Link>
           </div>
         </div>
       </div>
@@ -186,6 +193,7 @@ export const Header = () => {
          <button onClick={() => setIsMenuOpen(false)} className="text-white mb-8"><X size={30}/></button>
          <nav className="flex flex-col gap-6 text-white text-lg font-bold uppercase">
             <Link to="/treatment" onClick={() => setIsMenuOpen(false)}>Medications</Link>
+            <Link to="/erectile-dysfunction" onClick={() => setIsMenuOpen(false)}>Erectile Dysfunction</Link>
             <Link to="/package-labs" onClick={() => setIsMenuOpen(false)}>Labs</Link>
             <Link to="/trt" onClick={() => setIsMenuOpen(false)}>TRT</Link>
             <Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link>

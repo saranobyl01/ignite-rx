@@ -8,44 +8,28 @@ import hairloss1 from "../../assets/therapy images/hairloss-men (1).jpg"
 import hairloss2 from "../../assets/therapy images/hairloss-men (2).jpg"
 import hairloss3 from "../../assets/therapy images/hairloss-men (3).jpg"
 import bottle from "../../assets/bottle.png"
+import { useCart } from '@/context/CartContext';
 
 const HairlossMen = () => {
+    const { addToCart } = useCart();
   const medicationVariants = [
     {
-      name: "Finasteride 1mg",
-      description: "3 month supply",
+      name: "Finasteride 1mg (3 Month)",
+      description: "3 month supply for $90.00",
       price: 90,
-      productId: 24
+      productId: "55"
     },
     {
-      name: "Finasteride 1mg",
-      description: "6 month supply",
+      name: "Finasteride 1mg (6 Month)",
+      description: "6 month supply for $162.00 (10% savings)",
       price: 162,
-      productId: 138
+      productId: "56"
     },
     {
-      name: "Finasteride 1mg",
-      description: "12 month supply",
+      name: "Finasteride 1mg (12 Month)",
+      description: "12 month supply for $252 (30% savings!)",
       price: 252,
-      productId: 139
-    },
-    {
-      name: "MINOXIDIL 1mg / SPIRONOLACTONE 60mg",
-      description: "Custom compounded formula",
-      price: 79,
-      productId: 140
-    },
-    {
-      name: "MINOXIDIL 1mg / FINASTERIDE 1.25mg",
-      description: "Custom compounded formula",
-      price: 79,
-      productId: 141
-    },
-    {
-      name: "FINASTERIDE 0.1% / MINOXIDIL 6%",
-      description: "Topical solution",
-      price: 79,
-      productId: 142
+      productId: "57"
     }
   ];
     const benefits1 = [
@@ -61,19 +45,7 @@ const HairlossMen = () => {
     title: "FINASTERIDE 1MG TABLETS",
     description:
       "#1 Prescribed Hair Loss Medicine, FDA Approved 25+ Years, Generic Propecia",
-  },
-  {
-    title: "FINASTERIDE 1.25MG/ MINOXIDIL 1MG CAPSULES",
-    description:
-      "Dermatologist Formulated, Custom Compounded Blend, Supercharge Your Finasteride Treatment!",
-  },
-  {
-    title: "FINASTERIDE 0.1% / MINOXIDIL 6% TOPICAL SOLUTION",
-    description:
-      "Custom Topical Application, Dermatologist Formulated, Less Side Effects vs. Oral Versions",
-  },
-
-
+  }
 ];
 
   const benefits3 = [
@@ -88,11 +60,11 @@ const HairlossMen = () => {
     const faqItems = [
     {
       question: "How does it work?",
-      answer: "These three medications address the root causes of hair loss through complementary mechanisms:\n\n1. DHT Blockade (Finasteride & Spironolactone)\n• Finasteride inhibits 5-alpha reductase, blocking testosterone from converting into DHT (dihydrotestosterone), which causes follicle miniaturization.\n• Spironolactone works as an anti-androgen, lowering androgen receptor activity and reducing scalp DHT sensitivity—especially beneficial in women with hormonal hair loss.\n\n2. Follicular Blood Flow (Minoxidil)\n• Minoxidil dilates scalp blood vessels, increasing oxygen and nutrient supply to hair follicles. This boosts follicle activity, thickens hair shafts, and encourages regrowth.\n\n3. Custom Compounded Therapy\n• Combining these medications in customized oral or topical blends enhances effectiveness while minimizing systemic side effects. Formulations are dermatologist-designed for men and women."
+      answer: "These medications address the root causes of hair loss through complementary mechanisms:\n\n1. DHT Blockade (Finasteride & Spironolactone)\n• Finasteride inhibits 5-alpha reductase, blocking testosterone from converting into DHT (dihydrotestosterone), which causes follicle miniaturization.\n• Spironolactone works as an anti-androgen, lowering androgen receptor activity and reducing scalp DHT sensitivity—especially beneficial in women with hormonal hair loss.\n\n2. Follicular Blood Flow (Minoxidil)\n• Minoxidil dilates scalp blood vessels, increasing oxygen and nutrient supply to hair follicles. This boosts follicle activity, thickens hair shafts, and encourages regrowth.\n\n3. Custom Compounded Therapy\n• Combining these medications in customized oral or topical blends enhances effectiveness while minimizing systemic side effects. Formulations are dermatologist-designed for men and women."
     },
     {
       question: "What are the side effects and precautions?",
-      answer: "Finasteride (Oral):\n• Decreased libido or erectile dysfunction (1–2%)\n• Lower ejaculate volume\n• Contraindicated in women of childbearing age (Category X)\n• Rare persistent sexual side effects\n\nFinasteride (Topical):\n• Scalp irritation, pruritus, or erythema\n• Fewer systemic effects compared to oral\n\nMinoxidil (Oral):\n• Fluid retention or ankle swelling\n• Elevated heart rate\n• Hypertrichosis (unwanted body/facial hair)\n• Rare: pericardial effusion, chest pain\n\nMinoxidil (Topical):\n• Scalp dryness or burning\n• Eczema, dermatitis, or redness\n\nSpironolactone (Oral):\n• Elevated potassium (hyperkalemia)\n• Dizziness, dehydration, or lightheadedness\n• Menstrual irregularities\n• Breast tenderness or GI symptoms\n• Generally well tolerated in monitored doses"
+      answer: "Finasteride (Oral):\n• Decreased libido or erectile dysfunction (1–2%)\n• Lower ejaculate volume\n• Contraindicated in women of childbearing age (Category X)\n• Rare persistent sexual side effects\n\nFinasteride (Topical):\n• Scalp irritation, pruritus, or erythema\n• Fewer systemic effects compared to oral"
     },
     {
       question: "What to expect?",
@@ -119,24 +91,12 @@ const HairlossMen = () => {
       answer: "Finasteride is a medication primarily used to treat male pattern hair loss (androgenic alopecia) and enlarged prostate (benign prostatic hyperplasia). Like any medication, it can have potential side effects. The most common side effects of Finasteride include:\n\nSexual side effects: This is the most well-known side effect of Finasteride. It may include decreased libido (sex drive), erectile dysfunction, and decreased ejaculate volume. In some cases, these side effects may persist even after discontinuing the medication.\n\nBreast enlargement and tenderness: Some men may experience breast enlargement and tenderness, a condition known as gynecomastia.\n\nAllergic reactions: Rarely, some individuals may experience allergic reactions to Finasteride, which may manifest as rash, itching, swelling, dizziness, or difficulty breathing.\n\nIt's important to note that not everyone experiences these side effects, and most people tolerate Finasteride well. If you are prescribed Finasteride, your healthcare provider will monitor your progress and discuss any potential side effects with you. If you notice any troubling side effects while taking Finasteride, it is crucial to discuss them with your doctor as soon as possible."
     },
     {
-      question: "What are the possible side effects of Topical Finasteride?",
-      answer: "It is important that women of child-bearing age do not take or handle Finasteride as it may cause birth defects. The most common side effects of Topical Finasteride typically occur on the scalp and may include:\n\n• Scalp Pruritus\n• Burning Sensation\n• Irritation\n• Contact Dermatitis\n• Erythema (redness on the skin)"
-    },
-    {
       question: "What should I do if I miss a dose of Finasteride?",
       answer: "If you forget to take your daily dose of Finasteride, skip the missed dose and continue your regular dosing schedule. Do not take a double dose to make up for a missed one."
     },
     {
       question: "How should I store Finasteride?",
       answer: "Keep this medication in the original container that you received it in, tightly closed, and out of reach of children. Store it at room temperature and away from excess heat and moisture (not in the bathroom)."
-    },
-    {
-      question: "What is Minoxidil?",
-      answer: "Minoxidil is a prescription medication used to stimulate hair growth. Minoxidil widens blood vessels which leads to increased blood flow to hair follicles. This improved blood flow, in turn, enhances the follicles' function and stimulates hair growth in individuals experiencing hair loss."
-    },
-    {
-      question: "What are the possible side effects of Oral Minoxidil?",
-      answer: "Side effects are uncommon at the low doses used to treat hair loss. However, as with all prescription medications, side effects can occur:\n\nFluid Retention: Oral minoxidil can lead to fluid retention, causing swelling in the ankles and other parts of the body.\n\nIncreased Heart Rate: It may cause an increase in heart rate, which can be problematic for individuals with certain cardiovascular conditions.\n\nHypertrichosis (Excessive Hair Growth): One interesting side effect is increased hair growth. While this is a desired effect when using Minoxidil for hair loss, this hair growth can appear on other parts of the body.\n\nPericardial Effusion: There have been reports of oral minoxidil causing fluid accumulation around the heart (pericardial effusion).\n\nElectrolyte Imbalance: It can lead to electrolyte imbalances in the body.\n\nChest Pain: Some individuals may experience chest pain or discomfort."
     }
   ];
   return (
@@ -145,52 +105,20 @@ const HairlossMen = () => {
         <ProductHero
         protocol="HAIR RESTORATION"
         productName="Men's Hair Loss"
-        tagline="Finasteride / Minoxidil"
+        tagline="Finasteride"
       
         medicationVariants={medicationVariants.map(variant => ({
           name: variant.name,
           description: variant.description,
           features: [],
-          price: variant.price
+          price: variant.price,
+          productId: variant.productId
         }))}
         pricingPlans={[]}
         image={bottle}
-        // onAddToCart={handleAddToCart}
+        onAddToCart={(item) => addToCart({ ...item, image: bottle })}
       />
          <TrustBadges  />
-         <section className="py-12 bg-gradient-to-br from-background via-secondary to-background">
-            <div className="container mx-auto px-4">
-                <div className="max-w-6xl mx-auto">
-                    <h2 className="text-2xl md:text-3xl font-bold mb-6 text-foreground text-center">
-                    Select Your Treatment Option
-                    </h2>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {medicationVariants.map((variant, index) => (
-                        <div
-                        key={index}
-                        className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all flex flex-col shadow-sm hover:shadow-md"
-                        >
-                        <h3 className="font-bold text-lg text-foreground mb-2">
-                            {variant.name}
-                        </h3>
-                        <p className="text-muted-foreground text-sm mb-4 flex-grow">
-                            {variant.description}
-                        </p>
-                        <div className="flex items-baseline gap-1 mb-4">
-                            <span className="text-2xl font-bold text-foreground">${variant.price}</span>
-                        </div>
-                        <button
-                            onClick={() => handleAddToCart({ selectedVariant: variant })}
-                            className="w-full py-2.5 bg-black  text-white font-semibold rounded-full hover:bg-primary/90 transition-all active:scale-95"
-                        >
-                            Add to Cart
-                        </button>
-                        </div>
-                    ))}
-                    </div>
-                </div>
-            </div>
-        </section>
         <ProductDescription
                 title="What is Hair Loss?"
                 subtitle="The primary cause of male-pattern baldness is believed to be genetic and related to hormones, specifically the hormone dihydrotestosterone (DHT). In individuals with a genetic predisposition to this condition, hair follicles in certain areas of the scalp become sensitive to the effects of DHT. Over time, exposure to DHT causes these follicles to shrink and produce thinner and shorter hair until they eventually stop producing hair altogether."

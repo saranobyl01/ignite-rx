@@ -8,22 +8,29 @@ import hairloss1 from "../../assets/therapy images/hairloss1.jpg"
 import hairloss2 from "../../assets/therapy images/hairloss2.jpg"
 import hairloss3 from "../../assets/therapy images/hairloss3.jpg"
 import ProductFAQ from '@/components/Products/ProductFAQ'
+import { useCart } from '@/context/CartContext';
+
 const Hairloss = () => {
+    const { addToCart } = useCart();
 
       const medicationVariants = [
-    
     {
-      name: "MINOXIDIL 1mg / SPIRONOLACTONE 60mg",
-      
+      name: "Minoxidil 1mg / Spironolactone 60mg",
+      description: "90 Day Supply",
       price: 79,
-      productId: 140
+      productId: "58"
     },
-
     {
-      name: "FINASTERIDE 0.1% / MINOXIDIL 6%",
-      
+      name: "Minoxidil 1mg / Finasteride 1.25mg",
+      description: "90 Day Supply",
       price: 79,
-      productId: 142
+      productId: "59"
+    },
+    {
+      name: "Finasteride 0.1% / Minoxidil 6%",
+      description: "90 Day Supply",
+      price: 79,
+      productId: "60"
     }
   ];
     const benefits1 = [
@@ -36,9 +43,14 @@ const Hairloss = () => {
 
       const benefits2 = [
   {
-    title: "MINOXIDIL 1MG / SPIRONOLACTONE 60MG CAPSLUES",
+    title: "MINOXIDIL 1MG / SPIRONOLACTONE 60MG CAPSULES",
     description:
       "Hair Loss For Women of Any Age , Custom Compounded Blend, Dermatologist Formulated",
+  },
+  {
+    title: "MINOXIDIL 1MG / FINASTERIDE 1.25MG CAPSULES",
+    description:
+      "Post-Menopausal Women Only, Custom Compounded Blend, Dermatologist Formulated",
   },
   {
     title: "FINASTERIDE 0.1% / MINOXIDIL 6% TOPICAL SOLUTION",
@@ -61,7 +73,7 @@ const Hairloss = () => {
     const faqItems = [
     {
       question: "How does it work?",
-      answer: "These three medications address the root causes of hair loss through complementary mechanisms:\n\n1. DHT Blockade (Finasteride & Spironolactone)\n• Finasteride inhibits 5-alpha reductase, blocking testosterone from converting into DHT (dihydrotestosterone), which causes follicle miniaturization.\n• Spironolactone works as an anti-androgen, lowering androgen receptor activity and reducing scalp DHT sensitivity—especially beneficial in women with hormonal hair loss.\n\n2. Follicular Blood Flow (Minoxidil)\n• Minoxidil dilates scalp blood vessels, increasing oxygen and nutrient supply to hair follicles. This boosts follicle activity, thickens hair shafts, and encourages regrowth.\n\n3. Custom Compounded Therapy\n• Combining these medications in customized oral or topical blends enhances effectiveness while minimizing systemic side effects. Formulations are dermatologist-designed for men and women."
+      answer: "These medications address the root causes of hair loss through complementary mechanisms:\n\n1. DHT Blockade (Finasteride & Spironolactone)\n• Finasteride inhibits 5-alpha reductase, blocking testosterone from converting into DHT (dihydrotestosterone), which causes follicle miniaturization.\n• Spironolactone works as an anti-androgen, lowering androgen receptor activity and reducing scalp DHT sensitivity—especially beneficial in women with hormonal hair loss.\n\n2. Follicular Blood Flow (Minoxidil)\n• Minoxidil dilates scalp blood vessels, increasing oxygen and nutrient supply to hair follicles. This boosts follicle activity, thickens hair shafts, and encourages regrowth.\n\n3. Custom Compounded Therapy\n• Combining these medications in customized oral or topical blends enhances effectiveness while minimizing systemic side effects. Formulations are dermatologist-designed for men and women."
     },
     {
       question: "What are the side effects and precautions?",
@@ -124,11 +136,12 @@ const Hairloss = () => {
           name: variant.name,
           description: variant.description,
           features: [],
-          price: variant.price
+          price: variant.price,
+          productId: variant.productId
         }))}
         pricingPlans={[]}
         image={bottle}
-        // onAddToCart={handleAddToCart}
+        onAddToCart={(item) => addToCart({ ...item, image: bottle })}
       />
          <TrustBadges  />
          {/* <section className="py-12 bg-gradient-to-br from-background via-secondary to-background">

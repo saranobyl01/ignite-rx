@@ -9,21 +9,27 @@ import trt2 from "../../assets/therapy images/trt2.jpg"
 import trt3 from "../../assets/therapy images/trt3.jpg"
 import { ArrowRight } from 'lucide-react'
 import ProductFAQ from '@/components/Products/ProductFAQ'
+import { useCart } from '@/context/CartContext'
 
 const TRT = () => {
+    const { addToCart } = useCart();
 
       const medicationVariants = [
     {
-      name: "Testosterone Cypionate 200MG/ML",
-      description: "",
+      name: "Testosterone Cypionate",
+      dose: "200 MG/ML",
+      subtitle: "Inject 1 ML Weekly (4 ML Vial)",
+      description: "Includes Testosterone Cypionate 200mg/ml, Syringes and Alcohol Prep Pads.", 
       price: 129,
-      productId: 11
+      productId: "37"
     },
     {
       name: "Enclomiphene: Testosterone Oral",
-      description: "",
+      dose: "6.25 MG",
+      subtitle: "Daily Oral Tablet",
+      description: "Enclomiphene Citrate 6.25mg.",
       price: 199,
-      productId: 114
+      productId: "38"
     }
   ];
   const symptoms =[
@@ -91,11 +97,11 @@ const TRT = () => {
         <HeaderBlack/>
         <ProductHero
             protocol="Testosterone Replacement Therapy"
-            productName=""
+            productName="Testosterone Therapy"
             tagline="Powerful injectable testosterone therapy to reignite energy, muscle tone, libido, and overall vitality."
             price="129.00"
             image={vial}
-            // onAddToCart={handleAddToCart}
+            onAddToCart={(item) => addToCart({ ...item, image: vial })}
             medicationVariants={medicationVariants}
         />
         <TrustBadges />
@@ -118,7 +124,6 @@ const TRT = () => {
               <div className="space-y-4 text-muted-foreground leading-relaxed text-sm md:text-base lg:text-lg">
                 <p>
                     We’ll need to check your testosterone levels along with other blood markers to ensure you are healthy enough to start Testosterone Replacement Therapy (TRT). Don’t worry though, the process is easy and painless. We can send a phlebotomist to your home or you can go in-person to a lab and have your blood drawn. Once our doctors have reviewed your blood work and completed the virtual consultation, you’ll be notified if you have been approved then a prescription will be sent to the pharmacy and delivered to your home.
-
                 </p>
               </div>
               <button  className={`max-w-max lg:w-auto px-8 md:px-12 lg:px-14 py-3.5 md:py-4 font-medium tracking-wide text-sm md:text-base rounded-full flex gap-2 shadow-lg transition-all duration-300 active:scale-95 bg-black text-white  shadow-white/20 hover:shadow-xl hover:shadow-white/30 bg-[black] text-white shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 `}>

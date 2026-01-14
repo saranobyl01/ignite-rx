@@ -1,6 +1,7 @@
 import { HeaderBlack } from '@/components/HeaderBlack'
 import ProductHero from '@/components/Products/ProductHero'
 import React from 'react'
+import { useCart } from '@/context/CartContext'
 import bottle from "../../assets/bottle.png"
 import TrustBadges from '@/components/Products/TrustBadges'
 import ProductDescription from '@/components/Products/ProductDescription'
@@ -8,6 +9,7 @@ import birthcontrol from "../../assets/therapy images/birth-control.jpg"
 import ProductFAQ from '@/components/Products/ProductFAQ'
 
 const BirthControl = () => {
+  const { addToCart } = useCart();
 
       const faqItems = [
     {
@@ -135,6 +137,28 @@ const BirthControl = () => {
     }
   ];
 
+  const medicationVariants = [
+    { name: "Generic Ortho Cyclen", description: "3 Packs ($1.56/pill)", price: 46.97, productId: "69" },
+    { name: "Generic Ortho TriCyclen", description: "3 Packs ($1.56/pill)", price: 46.97, productId: "70" },
+    { name: "Generic Ortho TriCyclen-Lo", description: "3 Packs ($1.56/pill)", price: 46.97, productId: "71" },
+    { name: "Sprintec", description: "3 Packs ($1.56/pill)", price: 46.97, productId: "72" },
+    { name: "Tri-Sprintec", description: "3 Packs ($1.56/pill)", price: 46.97, productId: "73" },
+    { name: "Tri-Lo Sprintec", description: "3 Packs ($1.56/pill)", price: 46.97, productId: "74" },
+    { name: "Generic Yasmin", description: "3 Packs ($1.56/pill)", price: 46.97, productId: "75" },
+    { name: "Ocella", description: "3 Packs ($1.56/pill)", price: 46.97, productId: "76" },
+    { name: "Generic Desogen", description: "3 Packs ($1.56/pill)", price: 46.97, productId: "77" },
+    { name: "Apri", description: "3 Packs ($1.56/pill)", price: 46.97, productId: "78" },
+    { name: "Isibloom", description: "3 Packs ($1.56/pill)", price: 46.97, productId: "79" },
+    { name: "Generic Mircette", description: "3 Packs ($1.56/pill)", price: 46.97, productId: "80" },
+    { name: "Kariva", description: "3 Packs ($1.56/pill)", price: 46.97, productId: "81" },
+    { name: "Generic Ortho-Micronor", description: "3 Packs ($1.56/pill)", price: 46.97, productId: "82" },
+    { name: "Camila", description: "3 Packs ($1.56/pill)", price: 46.97, productId: "83" },
+    { name: "Heather", description: "3 Packs ($1.56/pill)", price: 46.97, productId: "84" },
+    { name: "Generic Loestrin 21", description: "3 Packs ($1.56/pill)", price: 46.97, productId: "85" },
+    { name: "Microgestin", description: "3 Packs ($1.56/pill)", price: 46.97, productId: "86" },
+    { name: "Generic Yaz", description: "3 Packs ($1.56/pill)", price: 46.97, productId: "87" }
+  ];
+
   return (
     <div>
         <HeaderBlack/>
@@ -142,9 +166,16 @@ const BirthControl = () => {
         protocol="Birth Control"
         productName="Oral Contraceptives"
         tagline="Empower yourself with birth control choices"
-        price="46.97"
+        medicationVariants={medicationVariants.map(variant => ({
+          name: variant.name,
+          description: variant.description,
+          features: [],
+          price: variant.price,
+          productId: variant.productId
+        }))}
+        pricingPlans={[]}
         image={bottle}
-        // onAddToCart={handleAddToCart}
+        onAddToCart={(item) => addToCart({ ...item, image: bottle })}
         />
         <TrustBadges/>
         <ProductDescription

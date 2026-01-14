@@ -7,7 +7,19 @@ import TrustBadges from '@/components/Products/TrustBadges'
 import coldsores from "../../assets/therapy images/cold-sores.jpg"
 import ProductFAQ from '@/components/Products/ProductFAQ'
 
+import { useCart } from '@/context/CartContext';
+
 const ColdSores = () => {
+  const { addToCart } = useCart();
+  const pricingPlans = [
+    {
+      name: "Valacyclovir 1g, Quantity 24",
+      duration: "1 gram, 24 Day Supply",
+      price: "60.00",
+      id: "64"
+    }
+  ];
+
   return (
     <div>
         <HeaderBlack/>
@@ -15,9 +27,14 @@ const ColdSores = () => {
             protocol="DERMATOLOGY"
             productName="Valacyclovir"
             tagline="Experience comfort with Valacyclovir's gentle approach to cold sore treatment"
-            price="60.00"
+            pricingPlans={pricingPlans}
             image={bottle}
-            // onAddToCart={handleAddToCart}
+            onAddToCart={(item) => addToCart({
+                name: item.name,
+                price: item.price,
+                image: bottle,
+                id: item.id
+            })}
         />
         <TrustBadges  />
 

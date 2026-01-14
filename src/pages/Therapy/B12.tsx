@@ -3,11 +3,13 @@ import ProductDescription from '@/components/Products/ProductDescription'
 import ProductHero from '@/components/Products/ProductHero'
 import TrustBadges from '@/components/Products/TrustBadges'
 import React from 'react'
+import { useCart } from '@/context/CartContext'
 import bottle from "../../assets/bottle.png"
 import b12_1 from "../../assets/therapy images/b121.jpg"
 import b12_2 from "../../assets/therapy images/b122.jpg"
 
 const B12 = () => {
+  const { addToCart } = useCart();
   const designedToSupport = [
     "Low energy or chronic fatigue",
     "Brain fog or trouble concentrating",
@@ -32,7 +34,7 @@ const B12 = () => {
         tagline="Endurance and focus, naturally."
         price="50.00"
         image={bottle}
-        // onAddToCart={handleAddToCart}
+        onAddToCart={(item) => addToCart({ ...item, image: bottle })}
         />
          <TrustBadges isDark={false} />
         <ProductDescription

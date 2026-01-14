@@ -44,7 +44,7 @@ export const ExploreTreatment = () => {
         {/* Header with Navigation and Progress */}
         <div className="container mx-auto px-0 flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 px-6 md:px-12">
           <h2 className="text-3xl md:text-[40px] tracking-[-1.6px] font-bold text-white">
-            CHOOSE YOUR <br /> TREATMENT
+            CHOOSE YOUR TREATMENT
           </h2>
 
           {/* Controls Container */}

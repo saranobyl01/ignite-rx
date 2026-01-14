@@ -4,8 +4,10 @@ import React from 'react'
 import bottle from "../../assets/bottle.png" // Fallback image
 import TrustBadges from '@/components/Products/TrustBadges'
 import ProductDescription from '@/components/Products/ProductDescription'
+import { useCart } from '@/context/CartContext'
 
 const LowDoseNaltrexone = () => {
+    const { addToCart } = useCart();
   const benefits = [
     "Modulates the immune system and reduces chronic inflammation",
     "Increases endorphin production for better mood and pain relief",
@@ -19,9 +21,17 @@ const LowDoseNaltrexone = () => {
             protocol="Immune & Pain Support"
             productName="LOW DOSE NALTREXONE"
             tagline="Balance Your System"
-            price="85.00"
+            price="99.00"
             image={bottle}
-            onAddToCart={()=>{}}
+            pricingPlans={[
+              {
+                duration: "1 Month",
+                label: "1 Month",
+                price: "99.00",
+                id: "48"
+              }
+            ]}
+            onAddToCart={(item) => addToCart({ ...item, image: bottle, id: "48" })}
         />
         <TrustBadges/>
         <ProductDescription

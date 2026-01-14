@@ -4,51 +4,114 @@ import React from 'react'
 import vial from "../../assets/vial.png"
 import TrustBadges from '@/components/Products/TrustBadges'
 import { ArrowRight } from 'lucide-react'
+import { useCart } from '@/context/CartContext'
 
 const WeightLoss = () => {
+    const { addToCart } = useCart();
+    
+    // Updated variants based on user request with specific IDs and prices
+    const pricingAndVariants = [
+        // Semaglutide
+        {
+            name: "Compounded Semaglutide (0.25 mg/week)",
+            price: 249.00,
+            productId: "1",
+            subtitle: "1 Month Supply",
+            description: "Semaglutide 0.25mg/week"
+        },
+        {
+            name: "Compounded Semaglutide (0.5 mg/week)",
+            price: 249.00,
+            productId: "2",
+             subtitle: "1 Month Supply",
+              description: "Semaglutide 0.5mg/week"
+        },
+        {
+            name: "Compounded Semaglutide (1 mg/week)",
+            price: 249.00,
+            productId: "3",
+             subtitle: "1 Month Supply",
+              description: "Semaglutide 1mg/week"
+        },
+        {
+            name: "Compounded Semaglutide (1.5 mg/week)",
+            price: 349.00,
+            productId: "4",
+             subtitle: "1 Month Supply",
+              description: "Semaglutide 1.5mg/week"
+        },
+        {
+            name: "Compounded Semaglutide (2 mg/week)",
+            price: 349.00,
+            productId: "5",
+             subtitle: "1 Month Supply",
+              description: "Semaglutide 2mg/week"
+        },
+         {
+            name: "Compounded Semaglutide (2.5 mg/week)",
+            price: 349.00,
+            productId: "6",
+             subtitle: "1 Month Supply",
+              description: "Semaglutide 2.5mg/week"
+        },
+        // Tirzepatide
+        {
+            name: "Compounded Tirzepatide (2.5 mg/week)",
+            price: 449.00,
+            productId: "7",
+            subtitle: "1 Month Supply",
+            description: "Tirzepatide 2.5mg/week"
+        },
+         {
+            name: "Compounded Tirzepatide (5 mg/week)",
+            price: 449.00,
+            productId: "8",
+            subtitle: "1 Month Supply",
+            description: "Tirzepatide 5mg/week"
+        },
+         {
+            name: "Compounded Tirzepatide (7.5 mg/week)",
+            price: 559.00,
+            productId: "9",
+            subtitle: "1 Month Supply",
+            description: "Tirzepatide 7.5mg/week"
+        },
+         {
+            name: "Compounded Tirzepatide (10 mg/week)",
+            price: 559.00,
+            productId: "10",
+            subtitle: "1 Month Supply",
+            description: "Tirzepatide 10mg/week"
+        },
+         {
+            name: "Compounded Tirzepatide (12.5 mg/week)",
+            price: 669.00,
+            productId: "11",
+            subtitle: "1 Month Supply",
+            description: "Tirzepatide 12.5mg/week"
+        },
+         {
+            name: "Compounded Tirzepatide (15 mg/week)",
+            price: 669.00,
+            productId: "12",
+            subtitle: "1 Month Supply",
+            description: "Tirzepatide 15mg/week"
+        }
+    ];
+
   return (
     <div>
         <HeaderBlack/>
         <ProductHero
         protocol="WEIGHT LOSS"
-        productName="Compounded GLP-1℞M | Advanced GLP-1 + GIP℞"
+        productName="Compounded Semaglutide & Tirzepatide"
         tagline=""
         additionalInfo="At Fortifyhp, we offer advanced medical weight loss treatments using GLP-1 (Semaglutide) and GLP-1 + GIP (Tirzepatide)—two clinically studied medications that help support healthy, sustainable weight management."
         
-        medicationVariants={[{
-        name: "Compounded GLP-1℞M",
-        }, {
-        name: "Advanced GLP-1 + GIP℞",
-        
-        }]} 
+        medicationVariants={pricingAndVariants} 
 
-        pricingPlans={[{
-        duration: "1 Month",
-        prices: {
-            "Compounded GLP-1℞M": 249.97,
-            "Advanced GLP-1 + GIP℞": 349.97
-        }
-        }, {
-        duration: "3 Months",
-        prices: {
-            "Compounded GLP-1℞M": 449.97,
-            "Advanced GLP-1 + GIP℞": 749.97
-        }
-        }, {
-        duration: "6 Months",
-        prices: {
-            "Compounded GLP-1℞M": 809.95,
-            "Advanced GLP-1 + GIP℞": 1349.82
-        }
-        }, {
-        duration: "12 Months",
-        prices: {
-            "Compounded GLP-1℞M": 1349.97,
-            "Advanced GLP-1 + GIP℞": 2349.88
-        }
-        }]}
         image={vial}
-        // onAddToCart={handleAddToCart}
+        onAddToCart={(item) => addToCart({ ...item, image: vial })}
       />
       <TrustBadges/>
       <section className="py-16 px-4 bg-bg-[#dbdbdb1a]">

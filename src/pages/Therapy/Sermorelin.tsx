@@ -8,21 +8,23 @@ import sermorelin1 from "../../assets/therapy images/sermorelin (1).jpg"
 import sermorelin2 from "../../assets/therapy images/sermorelin (2).jpg"
 import sermorelin3 from "../../assets/therapy images/sermorelin (3).jpg"
 import ProductFAQ from '@/components/Products/ProductFAQ'
+import { useCart } from '@/context/CartContext'
 
 const Sermorelin = () => {
+    const { addToCart } = useCart();
     
   const pricingPlans = [
     {
-      month: 1,
+      duration: "1 Month",
       label:"1 Month",
-      price: "249.00",
-      productId: 2
+      price: "195.00",
+      id: "39"
     },
     {
-      month: 3,
+      duration: "3 Months",
       label:"3 Months",
       price: "575.00",
-      productId: 113
+      id: "40"
     }
   ];
   const howItWorks = [
@@ -57,13 +59,21 @@ const Sermorelin = () => {
             tagline="Age Smarter. Live Stronger."
             image={vial}
             pricingPlans={pricingPlans}
-            // onAddToCart={handleAddToCart}
+            onAddToCart={(item) => {
+              // Find the selected plan to get the ID
+              const selectedPlan = pricingPlans.find(p => p.price === item.price.replace('$', ''));
+              addToCart({ 
+                ...item, 
+                image: vial,
+                id: selectedPlan?.id
+              });
+            }}
         />
               {/* Trust Badges */}
         <TrustBadges />
         <ProductDescription
                 title="What is Sermorelin?"
-                subtitle="Sermorelin is a bioidentical peptide analog of growth hormone-releasing hormone (GHRH) used in anti-aging and longevity medicine. It stimulates the pituitary gland to naturally increase the production and release of human growth hormone (HGH). Unlike synthetic HGH injections, Sermorelin works upstream to support the body’s own growth hormone rhythm—making it a safer and more physiologically aligned option. It is frequently used to improve body composition, energy, recovery, sleep, skin tone, andcognitive clarity."
+                subtitle="Sermorelin is a bioidentical peptide analog of growth hormone-releasing hormone (GHRH) used to naturally increase the production and release of human growth hormone (HGH). Unlike synthetic HGH injections, Sermorelin works upstream to support the body’s own growth hormone rhythm—making it a safer and more physiologically aligned option. It is frequently used to improve body composition, energy, recovery, sleep, skin tone, and cognitive clarity."
                 benefits={[]}
                 image={sermorelin3}
                 // onGetStarted={handleAddToCart}

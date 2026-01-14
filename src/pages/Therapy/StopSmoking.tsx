@@ -4,8 +4,19 @@ import React from 'react'
 import bottle from "../../assets/bottle.png" // Fallback image
 import TrustBadges from '@/components/Products/TrustBadges'
 import ProductDescription from '@/components/Products/ProductDescription'
+import { useCart } from '@/context/CartContext'
 
 const StopSmoking = () => {
+    const { addToCart } = useCart();
+    const pricingPlans = [
+        {
+            name: "Bupropion SR 150mg",
+            duration: "180 Quantity (90 Day Supply)",
+            price: "45.00",
+            id: "88"
+        }
+    ];
+
   const benefits = [
     "Reduces nicotine cravings and withdrawal symptoms",
     "Blocks the pleasurable effects of nicotine in the brain",
@@ -19,9 +30,14 @@ const StopSmoking = () => {
             protocol="Cessation Support"
             productName="STOP SMOKING SUPPORT"
             tagline="Reclaim Your Health"
-            price="99.00"
+            pricingPlans={pricingPlans}
             image={bottle}
-            onAddToCart={()=>{}}
+            onAddToCart={(item) => addToCart({
+                name: item.name,
+                price: item.price,
+                image: bottle,
+                id: item.id
+            })}
         />
         <TrustBadges/>
         <ProductDescription

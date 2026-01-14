@@ -7,8 +7,10 @@ import spray from "../../assets/spray.png"
 import nadnasal1 from "../../assets/therapy images/nad-nasal (1).jpg"
 import nadnasal2 from "../../assets/therapy images/nad-nasal (2).jpg"
 import nadnasal3 from "../../assets/therapy images/nad-nasal (3).jpg"
+import { useCart } from '@/context/CartContext';
 
 const NadNasal = () => {
+  const { addToCart } = useCart();
     const benefits = [
     "Increases energy, stamina, and recovery",
     "Boosts cognitive clarity and focus",
@@ -80,7 +82,15 @@ const NadNasal = () => {
             tagline="Boost your energy with NAD+"
             price="23.14"
             image={spray}
-            // onAddToCart={handleAddToCart}
+            pricingPlans={[
+              {
+                duration: "1 Month",
+                label: "1 Month",
+                price: "23.14",
+                id: "44"
+              }
+            ]}
+            onAddToCart={(item) => addToCart({ ...item, image: spray, id: "44" })}
         />
         <TrustBadges />
 

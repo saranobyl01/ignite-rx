@@ -6,8 +6,11 @@ import vial from "../../assets/vial.png"
 import ProductDescription from '@/components/Products/ProductDescription'
 import pt141 from "../../assets/therapy images/pt141.jpg"
 import pt1412 from "../../assets/therapy images/pt1412.webp"
+import { useCart } from '@/context/CartContext'
 
 const Pt141 = () => {
+    const { addToCart } = useCart();
+
       const benefits = [
     "Increases sexual desire in men and women",
     "Effective for psychological and neurological libido issues",
@@ -21,11 +24,19 @@ const Pt141 = () => {
         <HeaderBlack/>
         <ProductHero
             protocol="Sexual Health & Wellness"
-            productName="PT-141"
+            productName="PT-141 (Bremelanotide)"
             tagline="The arousal peptide—ideal for men and women."
-            price="189"
+            price="189.00"
             image={vial}
-            // onAddToCart={handleAddToCart}
+            pricingPlans={[
+              {
+                duration: "1 Month",
+                label: "1 Month",
+                price: "189.00",
+                id: "47"
+              }
+            ]}
+            onAddToCart={(item) => addToCart({ ...item, image: vial, id: "47" })}
         />
         <TrustBadges/>
         <ProductDescription

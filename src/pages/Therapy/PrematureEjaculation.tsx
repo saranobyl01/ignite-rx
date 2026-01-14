@@ -6,12 +6,14 @@ import bottle from "../../assets/bottle.png"
 import TrustBadges from '@/components/Products/TrustBadges'
 import ProductDescription from '@/components/Products/ProductDescription'
 import ProductFAQ from '@/components/Products/ProductFAQ'
+import { useCart } from '@/context/CartContext'
 
 const PrematureEjaculation = () => {
+    const { addToCart } = useCart();
     const pricingPlans = [
-        { months: 3, price: "180.00", label: "3 Months", productId: 12 },
-        { months: 6, price: "360.00", label: "6 Months", productId: 115 },
-        { months: 12, price: "720.00", label: "12 Months", productId: 116 }
+        { name: "Sertraline 25Mg (3 Month)", duration: "3 Months", price: "90.00", label: "3 Months", id: "65" },
+        { name: "Sertraline 25Mg (6 Month)", duration: "6 Months", price: "162.00", label: "6 Months", id: "66" },
+        { name: "Sertraline 25Mg (12 Month)", duration: "12 Months", price: "252.00", label: "12 Months", id: "67" }
     ];
       const faqItems = [
     {
@@ -67,7 +69,7 @@ const PrematureEjaculation = () => {
         price="180.00"
         pricingPlans={pricingPlans}
         image={bottle}
-        // onAddToCart={handleAddToCart}
+        onAddToCart={(item) => addToCart({ ...item, image: bottle })}
       />
       <TrustBadges />
       <ProductDescription
@@ -78,7 +80,7 @@ const PrematureEjaculation = () => {
         //  onGetStarted={handleAddToCart}
          imageAspectRatio="aspect-[3/2]"
       />
-      <ProductFAQ items={faqItems} isDark={false} />
+      <ProductFAQ items={faqItems} />
     </div>
   )
 }

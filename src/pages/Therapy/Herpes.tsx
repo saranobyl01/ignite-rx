@@ -6,10 +6,33 @@ import TrustBadges from '@/components/Products/TrustBadges'
 import ProductDescription from '@/components/Products/ProductDescription'
 import herpes from "../../assets/therapy images/herpes.jpg"
 import ProductFAQ from '@/components/Products/ProductFAQ'
+import { useCart } from '@/context/CartContext'
 
 const Herpes = () => {
+  const { addToCart } = useCart();
 
-      const faqItems = [
+  const medicationVariants = [
+    {
+      name: "Valacyclovir 1g, Quantity 90",
+      description: "1 gram, 90 Day Supply (Refills 3)",
+      price: 90,
+      productId: "61"
+    },
+    {
+      name: "Valacyclovir 500mg, Quantity 36",
+      description: "500mg, 36 Day Supply (Refills 3)",
+      price: 60,
+      productId: "62"
+    },
+    {
+      name: "Valacyclovir 500mg, Quantity 90",
+      description: "500mg, 90 Day Supply (Refills 3)",
+      price: 75,
+      productId: "63"
+    }
+  ];
+
+  const faqItems = [
     {
       question: "What is Valacyclovir?",
       answer: "Valacyclovir is an oral tablet, prescription medicine that is FDA approved to treat cold sores and genital herpes."
@@ -80,9 +103,16 @@ const Herpes = () => {
         protocol="Valacyclovir"
         productName="Herpes"
         tagline="Experience comfort with Valacyclovir's gentle approach to cold sore treatment."
-        price="90.00"
+        medicationVariants={medicationVariants.map(variant => ({
+          name: variant.name,
+          description: variant.description,
+          features: [],
+          price: variant.price,
+          productId: variant.productId
+        }))}
+        pricingPlans={[]}
         image={bottle}
-        // onAddToCart={handleAddToCart}
+        onAddToCart={(item) => addToCart({ ...item, image: bottle })}
       />
       <TrustBadges/>
       <ProductDescription

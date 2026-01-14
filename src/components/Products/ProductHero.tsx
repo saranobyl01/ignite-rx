@@ -11,6 +11,7 @@ interface PricingPlan {
   label?: string;
   selectedVariant?: MedicationVariant;
   selectedMedication?: string;
+  id?: string;
 }
 
 interface MedicationVariant {
@@ -20,6 +21,7 @@ interface MedicationVariant {
   description?: string;
   features?: string[];
   price?: number;
+  productId?: string;
 }
 
 interface ProductHeroProps {
@@ -31,7 +33,7 @@ interface ProductHeroProps {
   pricingPlans?: PricingPlan[];
   medicationVariants?: MedicationVariant[];
   image: string;
-  onAddToCart: (selectedPlan?: PricingPlan) => void;
+  onAddToCart: (item: { name: string; price: string; category: string; id?: string }) => void;
 }
 
 const ProductHero = ({
@@ -167,7 +169,23 @@ const ProductHero = ({
 
                   {/* CTA */}
                   <Button
-                    onClick={() => onAddToCart()}
+                    onClick={() => {
+                        let finalName = productName;
+                        if (hasMedicationVariants) { 
+                             finalName = `${medicationVariants[selectedMedicationIndex].name}`;
+                        } else if (hasMultiplePlans) {
+                             finalName = `${productName} (${pricingPlans[selectedPlanIndex].duration})`;
+                        }
+                        
+                        onAddToCart({
+                            name: finalName,
+                            price: `$${currentPrice}`,
+                            category: protocol,
+                            id: hasMedicationVariants 
+                                ? medicationVariants[selectedMedicationIndex].productId 
+                                : (hasMultiplePlans ? pricingPlans[selectedPlanIndex].id : undefined)
+                        });
+                    }}
                     className="w-full py-6 text-lg font-semibold rounded-xl bg-black text-white"
                   >
                     ADD TO CART

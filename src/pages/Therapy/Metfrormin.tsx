@@ -8,8 +8,10 @@ import metformin1 from "../../assets/therapy images/metformin (1).jpg"
 import metformin2 from "../../assets/therapy images/metformin (2).jpg"
 import metformin3 from "../../assets/therapy images/metformin (3).jpg"
 import ProductFAQ from '@/components/Products/ProductFAQ'
+import { useCart } from '@/context/CartContext'
 
 const Metfrormin = () => {
+  const { addToCart } = useCart();
 
     const benefits1 = [
   {
@@ -89,11 +91,21 @@ const benefits = [
         <HeaderBlack/>
         <ProductHero
             protocol="Metformin"
-            productName="METFORMIN"
+            productName="Metformin XR: Anti-Aging"
             tagline="Live Longer, Function Better"
-            price="75.00"
             image={bottle}
-            // onAddToCart={handleAddToCart}
+            pricingPlans={[
+              {
+                duration: "3 Months",
+                label: "3 Months",
+                price: "75.00",
+                id: "41"
+              }
+            ]}
+            onAddToCart={(item) => {
+               // Hardcoded ID for single plan
+               addToCart({ ...item, image: bottle, id: "41" });
+            }}
         />
         <TrustBadges/>
         <ProductDescription
