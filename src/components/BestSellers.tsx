@@ -226,8 +226,10 @@ const products = [
 ];
 
 export const BestSellers = () => {
+  const paginationRef = React.useRef<HTMLDivElement>(null);
+
   return (
-    <section className="bg-black text-white py-8 md:py-18">
+    <section className="bg-white text-black py-8 md:py-18">
       <div className="px-6">
         
         {/* Header with Navigation and Progress */}
@@ -238,16 +240,19 @@ export const BestSellers = () => {
 
           {/* Custom Controls Container */}
           <div className="flex items-center gap-6 min-w-[180px]">
-            <button className="best-prev text-gray-500 hover:text-white transition">
+            <button className="best-prev text-gray-400 hover:text-black transition">
               <ChevronLeft size={28} strokeWidth={1.5} />
             </button>
 
             {/* Progress Bar Container */}
-            <div className="flex-1 h-[2.5px] bg-gray-400 relative min-w-[80px]">
-              <div className="best-pagination2 absolute top-0 left-0 h-full bg-gray-500 transition-all duration-300 [&_.swiper-pagination-progressbar-fill]:bg-white" />
+            <div className="flex-1 h-[2.5px] bg-gray-200 relative min-w-[80px]">
+              <div 
+                ref={paginationRef}
+                className="best-pagination2 absolute inset-0 [&_.swiper-pagination-progressbar-fill]:!bg-black" 
+              />
             </div>
 
-            <button className="best-next text-gray-500 hover:text-white transition">
+            <button className="best-next text-gray-400 hover:text-black transition">
               <ChevronRight size={28} strokeWidth={1.5} />
             </button>
           </div>
@@ -262,9 +267,13 @@ export const BestSellers = () => {
             prevEl: '.best-prev',
             nextEl: '.best-next',
           }}
+          onBeforeInit={(swiper) => {
+            // @ts-ignore
+            swiper.params.pagination.el = paginationRef.current;
+          }}
           pagination={{
             type: 'progressbar',
-            el: '.best-pagination2',
+            el: paginationRef.current,
           }}
           breakpoints={{
             640: { slidesPerView: 2 },
@@ -275,10 +284,10 @@ export const BestSellers = () => {
         >
           {products.map((product, index) => (
             <SwiperSlide key={index}>
-              <div className="flex flex-col h-full bg-black">
+              <div className="flex flex-col h-full bg-white">
                 
                 {/* Image Container */}
-                <div className="relative aspect-[4/5] bg-[#222] rounded-sm mb-4 overflow-hidden group">
+                <div className="relative aspect-[4/5] bg-[#f7f7f7] rounded-sm mb-4 overflow-hidden group">
                   {/* Bestseller Badge */}
                   <div className="absolute top-3 left-3 z-10 bg-[#f17625] text-black text-[10px] font-bold px-2 py-1 rounded-sm uppercase">
                     Bestseller
@@ -299,11 +308,11 @@ export const BestSellers = () => {
                   
                   <div className="w-full flex flex-col md:flex-row items-start justify-between mb-2 md:gap-4 gap-2">
                     <div className='flex-1 min-h-12 flex items-start'>
-                        <h3 className=" text-xl font-semibold line-clamp-2 leading-tight overflow-hidden text-ellipsis break-words text-white">
+                        <h3 className=" text-xl font-semibold line-clamp-2 leading-tight overflow-hidden text-ellipsis break-words text-black">
                         {product.name}
                         </h3>
                     </div>
-                    <div className=" text-xl font-bold whitespace-nowrap leading-tight flex-shrink-0 mt-0 flex items-center gap-2 text-white md:text-white/60">
+                    <div className=" text-xl font-bold whitespace-nowrap leading-tight flex-shrink-0 mt-0 flex items-center gap-2 text-black md:text-black/60">
                       <span className="">
                         {product.price}
                       </span>

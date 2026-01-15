@@ -20,7 +20,7 @@ const HowToOrder = () => {
   ];
 
   return (
-    <section className="bg-black">
+    <section className="bg-white">
       <div className="grid grid-cols-1 md:grid-cols-2 container mx-auto">
         {/* Solution Box */}
         <div className="bg-[#f17625] p-4 md:p-24 flex flex-col justify-center items-center text-center">
@@ -32,11 +32,11 @@ const HowToOrder = () => {
         </div>
 
         {/* Steps Box */}
-        <div className="bg-black p-4 md:p-24 flex flex-col justify-center border-t md:border-t-0 md:border-l border-white/10">
-          <h3 className="text-white text-4xl md:text-5xl font-bold uppercase mb-2 tracking-tighter leading-none">
+        <div className="bg-white p-4 md:p-24 flex flex-col justify-center border-t md:border-t-0 md:border-l border-black/5">
+          <h3 className="text-black text-4xl md:text-5xl font-bold uppercase mb-2 tracking-tighter leading-none">
             SIMPLE STEPS TO BETTER HEALTH
           </h3>
-          <p className="text-gray-400 mb-12">Your journey to optimal health starts here</p>
+          <p className="text-gray-600 mb-12">Your journey to optimal health starts here</p>
 
           <div className="space-y-8">
             {steps.map((step) => (
@@ -45,8 +45,8 @@ const HowToOrder = () => {
                   {step.id}
                 </div>
                 <div>
-                  <h4 className="text-white font-bold text-lg uppercase tracking-tight">{step.title}</h4>
-                  <p className="text-gray-400 text-sm">{step.desc}</p>
+                  <h4 className="text-black font-bold text-lg uppercase tracking-tight">{step.title}</h4>
+                  <p className="text-gray-600 text-sm">{step.desc}</p>
                 </div>
               </div>
             ))}
