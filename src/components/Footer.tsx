@@ -41,7 +41,7 @@ export const Footer = () => {
             <div className="flex flex-col gap-1">
               <span className="text-sm text-gray-500 font-bold uppercase tracking-widest">Need help?</span>
               <a href="mailto:support@algorx.ai" className="text-sm md:text-lg font-bold hover:text-[#f17625] transition-colors">
-                SUPPORT@ALGORX.AI
+                SUPPORT@IGNITERX.COM
               </a>
             </div>
           </div>

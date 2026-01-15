@@ -106,7 +106,7 @@ const WeightLoss = () => {
         protocol="WEIGHT LOSS"
         productName="Compounded Semaglutide & Tirzepatide"
         tagline=""
-        additionalInfo="At Fortifyhp, we offer advanced medical weight loss treatments using GLP-1 (Semaglutide) and GLP-1 + GIP (Tirzepatide)—two clinically studied medications that help support healthy, sustainable weight management."
+        additionalInfo="At IgniteRx, we offer advanced medical weight loss treatments using GLP-1 (Semaglutide) and GLP-1 + GIP (Tirzepatide)—two clinically studied medications that help support healthy, sustainable weight management."
         
         medicationVariants={pricingAndVariants} 
 
