@@ -31,7 +31,7 @@ export const Header = () => {
       }`}
     >
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-12 relative">
+        <div className="flex items-end justify-between h-12 relative">
           
           {/* Mobile Hamburger - Left */}
           <button className="md:hidden text-white" onClick={() => setIsMenuOpen(true)}>
