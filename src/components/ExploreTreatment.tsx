@@ -33,70 +33,34 @@ const treatments = [
 ];
 
 export const ExploreTreatment = () => {
-  const prevRef = useRef<HTMLButtonElement>(null);
-  const nextRef = useRef<HTMLButtonElement>(null);
-  const paginationRef = useRef<HTMLDivElement>(null);
-
   return (
     <section className="bg-white text-black py-8 md:py-24 px-6 md:px-4">
       <div className="flex flex-col relative">
         
-        {/* Header with Navigation and Progress */}
+        {/* Header */}
         <div className="container mx-auto px-0 flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 px-6 md:px-12">
           <h2 className="text-3xl md:text-[40px] tracking-[-1.6px] font-bold text-black">
             CHOOSE YOUR TREATMENT
           </h2>
-
-          {/* Controls Container */}
-          <div className="flex items-center gap-6 min-w-[200px] mt-6 md:mt-0">
-            {/* Custom Prev Arrow */}
-            <button ref={prevRef} className="text-gray-400 hover:text-black transition">
-              <ChevronLeft size={32} strokeWidth={1} />
-            </button>
-
-            {/* Progress Bar Container */}
-            <div className="flex-1 h-[2.5px] bg-gray-200 relative min-w-[80px]">
-              <div
-                ref={paginationRef}
-                className="absolute inset-0
-                          [&_.swiper-pagination-progressbar-fill]:!bg-black"
-              />
-            </div>
-
-            {/* Custom Next Arrow */}
-            <button ref={nextRef} className="text-gray-400 hover:text-black transition">
-              <ChevronRight size={32} strokeWidth={1} />
-            </button>
-          </div>
         </div>
+
         <div>
         {/* Swiper Slider */}
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={20}
-          slidesPerView={1.2} // Show a peek of the next slide on mobile
-          touchRatio={1}
-          threshold={5}
-          allowTouchMove={true}
-          onBeforeInit={(swiper) => {
-            // @ts-ignore
-            swiper.params.navigation.prevEl = prevRef.current;
-            // @ts-ignore
-            swiper.params.navigation.nextEl = nextRef.current;
-            // @ts-ignore
-            swiper.params.pagination.el = paginationRef.current;
-          }}
+          slidesPerView={1.2}
           navigation={{
-            prevEl: prevRef.current,
-            nextEl: nextRef.current,
+            prevEl: '.explore-prev',
+            nextEl: '.explore-next',
           }}
           pagination={{
             type: 'progressbar',
-            el: paginationRef.current,
+            el: '.explore-pagination',
           }}
           breakpoints={{
             640: { slidesPerView: 2 },
-            1024: { slidesPerView: 4 }, // 4 slides on desktop
+            1024: { slidesPerView: 4 },
           }}
           className=""
         >
@@ -119,6 +83,25 @@ export const ExploreTreatment = () => {
               </div>
             </SwiperSlide>
           ))}
+
+          {/* Controls Container - Inside Swiper */}
+          <div className="flex items-center gap-6 w-[180px] mt-6">
+            <button className="explore-prev text-gray-400 hover:text-black transition">
+              <ChevronLeft size={32} strokeWidth={1} />
+            </button>
+
+            <div className="flex-1 h-[2.5px] bg-gray-200 relative min-w-[80px]">
+              <div
+                className="explore-pagination absolute inset-0
+                          [&_.swiper-pagination-progressbar-fill]:!bg-black"
+              />
+            </div>
+
+            <button className="explore-next text-gray-400 hover:text-black transition">
+              <ChevronRight size={32} strokeWidth={1} />
+            </button>
+          </div>
+
         </Swiper>
         </div>
       </div>

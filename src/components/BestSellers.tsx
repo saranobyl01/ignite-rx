@@ -226,29 +226,25 @@ const products = [
 ];
 
 export const BestSellers = () => {
-  const paginationRef = React.useRef<HTMLDivElement>(null);
-
   return (
     <section className="bg-white text-black py-8 md:py-18">
       <div className="px-6">
         
-        {/* Header with Navigation and Progress */}
+        {/* Header */}
         <div className="container mx-auto flex items-center justify-between mb-12">
           <h2 className="text-3xl md:text-[40px] tracking-[-1.6px] font-bold uppercase ">
             BEST SELLERS
           </h2>
 
-          {/* Custom Controls Container */}
+          {/* Custom Controls Container - Right Side */}
           <div className="flex items-center gap-6 min-w-[180px]">
             <button className="best-prev text-gray-400 hover:text-black transition">
               <ChevronLeft size={28} strokeWidth={1.5} />
             </button>
 
-            {/* Progress Bar Container */}
             <div className="flex-1 h-[2.5px] bg-gray-200 relative min-w-[80px]">
               <div 
-                ref={paginationRef}
-                className="best-pagination2 absolute inset-0 [&_.swiper-pagination-progressbar-fill]:!bg-black" 
+                className="best-pagination absolute inset-0 [&_.swiper-pagination-progressbar-fill]:!bg-black" 
               />
             </div>
 
@@ -263,20 +259,13 @@ export const BestSellers = () => {
           modules={[Navigation, Pagination]}
           spaceBetween={16}
           slidesPerView={1.2}
-          touchRatio={1}
-          threshold={5}
-          allowTouchMove={true}
           navigation={{
             prevEl: '.best-prev',
             nextEl: '.best-next',
           }}
-          onBeforeInit={(swiper) => {
-            // @ts-ignore
-            swiper.params.pagination.el = paginationRef.current;
-          }}
           pagination={{
             type: 'progressbar',
-            el: paginationRef.current,
+            el: '.best-pagination',
           }}
           breakpoints={{
             640: { slidesPerView: 2 },
@@ -323,7 +312,6 @@ export const BestSellers = () => {
                   </div>
 
                   {/* Add to Cart Button */}
-                  {/* Add to Cart Button */}
                   <Link to={product.link} className="w-full bg-[#f17625] hover:bg-[#d15e14] text-black font-black uppercase text-xs py-3 rounded-sm transition-colors mt-4 text-center">
                     VIEW DETAILS
                   </Link>
@@ -331,6 +319,7 @@ export const BestSellers = () => {
               </div>
             </SwiperSlide>
           ))}
+
         </Swiper>
       </div>
     </section>
