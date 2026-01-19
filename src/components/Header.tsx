@@ -31,7 +31,7 @@ export const Header = () => {
       }`}
     >
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-12">
+        <div className="flex items-center justify-between h-12 relative">
           
           {/* Mobile Hamburger - Left */}
           <button className="md:hidden text-white" onClick={() => setIsMenuOpen(true)}>
@@ -39,7 +39,7 @@ export const Header = () => {
           </button>
 
           {/* Logo - Centered on Mobile, Left on Desktop */}
-          <Link to="/" className="absolute left-1/2 -translate-x-1/2 top-0 md:static md:translate-x-0 flex items-center h-12">
+          <Link to="/" className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 flex items-center h-12">
             <span className="text-2xl font-bold tracking-tighter ">
              <img src={logo} alt="" className='h-12' />
             </span>
