@@ -33,18 +33,17 @@ export const Header = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-12">
           
-          {/* Logo Section */}
-          <div className="flex items-center gap-4">
-             {/* Mobile Hamburger */}
-            <button className="md:hidden text-white" onClick={() => setIsMenuOpen(true)}>
-              <Menu size={24} />
-            </button>
-            <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold tracking-tighter ">
-               <img src={logo} alt="" className='h-12' />
-              </span>
-            </Link>
-          </div>
+          {/* Mobile Hamburger - Left */}
+          <button className="md:hidden text-white" onClick={() => setIsMenuOpen(true)}>
+            <Menu size={24} />
+          </button>
+
+          {/* Logo - Centered on Mobile, Left on Desktop */}
+          <Link to="/" className="absolute left-1/2 -translate-x-1/2 top-0 md:static md:translate-x-0 flex items-center h-12">
+            <span className="text-2xl font-bold tracking-tighter ">
+             <img src={logo} alt="" className='h-12' />
+            </span>
+          </Link>
 
           {/* Center: Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-10">
