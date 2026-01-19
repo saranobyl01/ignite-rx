@@ -140,7 +140,7 @@ const WeightLoss = () => {
             </div>
             <div>
               <img 
-                src={""} 
+                src={vial} 
                 alt="weightloss" 
                 className="w-full h-auto rounded-lg shadow-lg object-cover aspect-[3/2.5]"
               />

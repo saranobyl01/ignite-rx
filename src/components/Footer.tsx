@@ -41,17 +41,17 @@ export const Footer = () => {
             <div className="flex flex-col gap-1">
               <span className="text-sm text-gray-500 font-bold uppercase tracking-widest">Need help?</span>
               <a href="mailto:support@algorx.ai" className="text-sm md:text-lg font-bold hover:text-[#f17625] transition-colors">
-                SUPPORT@IGNITERX.COM
+                info@igniterx.com
               </a>
             </div>
           </div>
 
-          {/* About Column */}
+          {/* Quick Link Column */}
           <div className="flex flex-col gap-6">
-            <h4 className="text-sm text-gray-500 font-black tracking-[0.3em] uppercase">About</h4>
+            <h4 className="text-sm text-gray-500 font-black tracking-[0.3em] uppercase">Quick Links</h4>
             <ul className="flex flex-col gap-3 text-sm font-bold uppercase tracking-widest">
-              <li><a href="#" className="hover:text-gray-400 transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-gray-400 transition-colors">FAQ</a></li>
+              <li><a href="/" className="hover:text-gray-400 transition-colors">Home</a></li>
+              <li><a href="/weightloss" className="hover:text-gray-400 transition-colors">Weight Loss</a></li>
             </ul>
           </div>
 
@@ -59,17 +59,23 @@ export const Footer = () => {
           <div className="flex flex-col gap-6">
             <h4 className="text-sm text-gray-500 font-black tracking-[0.3em] uppercase">Legal</h4>
             <ul className="flex flex-col gap-3 text-sm font-bold uppercase tracking-widest">
-              <li><a href="#" className="hover:text-gray-400 transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-gray-400 transition-colors">Terms of Use</a></li>
+              <li><Link to="/terms-of-use" className="hover:text-gray-400 transition-colors">Terms of Use</Link></li>
+              <li><Link to="/privacy-policy" className="hover:text-gray-400 transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/hipaa-notice" className="hover:text-gray-400 transition-colors">HIPAA Notice</Link></li>
+              <li><Link to="/returns-refunds" className="hover:text-gray-400 transition-colors">Returns & Refunds</Link></li>
+              <li><Link to="/ccpa-opt-out" className="hover:text-gray-400 transition-colors">CCPA Opt-Out</Link></li>
             </ul>
           </div>
 
-          {/* Treatments Column */}
+          {/* Contact Us Column */}
           <div className="flex flex-col gap-6">
-            <h4 className="text-sm text-gray-500 font-black tracking-[0.3em] uppercase">Treatments</h4>
+            <h4 className="text-sm text-gray-500 font-black tracking-[0.3em] uppercase">Contact Us</h4>
             <ul className="flex flex-col gap-3 text-sm font-bold uppercase tracking-widest">
-              <li><a href="#" className="hover:text-gray-400 transition-colors">Enclomiphene</a></li>
-              <li><a href="#" className="hover:text-gray-400 transition-colors">And More...</a></li>
+              <li><a href="#" className="hover:text-gray-400 transition-colors">Address: 
+                7901 4th Street North
+                Suite 300
+                St Petersburg, FL 33702</a></li>
+              <li><a href="#" className="hover:text-gray-400 transition-colors">Phone: +18448206625</a></li>
             </ul>
           </div>
         </div>
@@ -87,14 +93,14 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Bar: Copyright and Small Legal Links */}
-        <div className="mt-8 flex flex-col md:flex-row justify-center gap-x-8 gap-y-4 text-sm font-bold  uppercase tracking-widest text-center">
-          <span>Algorx Copyright 2025</span>
+        {/* <div className="mt-8 flex flex-col md:flex-row justify-center gap-x-8 gap-y-4 text-sm font-bold  uppercase tracking-widest text-center">
+          <span>IgniteRx Copyright 2025</span>
           <a href="#" className="hover:text-gray-500">Terms & Conditions</a>
           <a href="#" className="hover:text-gray-500">Privacy Policy</a>
           <a href="#" className="hover:text-gray-500">Refund Policy</a>
           <a href="#" className="hover:text-gray-500">Shipping Policy</a>
           <a href="#" className="hover:text-gray-500">Telehealth Consent</a>
-        </div>
+        </div> */}
 
       </div>
     </footer>

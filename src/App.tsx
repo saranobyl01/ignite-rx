@@ -31,6 +31,12 @@ import StopSmoking from "./pages/Therapy/StopSmoking";
 import TRT from "./pages/Therapy/TRT";
 import WeightLoss from "./pages/Therapy/WeightLoss";
 import ErectileDysfunction from "./pages/Therapy/ErectileDysfunction";
+import TermsOfUse from "./pages/Legal/TermsOfUse";
+import PrivacyPolicy from "./pages/Legal/PrivacyPolicy";
+import HipaaNotice from "./pages/Legal/HipaaNotice";
+import ReturnsRefunds from "./pages/Legal/ReturnsRefunds";
+import CcpaOptOut from "./pages/Legal/CcpaOptOut";
+
 
 
 import ScrollToTop from "./components/ScrollToTop";
@@ -71,7 +77,13 @@ function App() {
           <Route path="/trt" element={<TRT/>} />
           <Route path="/weightloss" element={<WeightLoss/>} />
           <Route path="/erectile-dysfunction" element={<ErectileDysfunction/>} />
+          <Route path="/terms-of-use" element={<TermsOfUse />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/hipaa-notice" element={<HipaaNotice />} />
+          <Route path="/returns-refunds" element={<ReturnsRefunds />} />
+          <Route path="/ccpa-opt-out" element={<CcpaOptOut />} />
       </Routes>
+
 
  
       <Footer />
