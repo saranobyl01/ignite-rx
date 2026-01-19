@@ -40,7 +40,7 @@ export const Footer = () => {
             </div>
             <div className="flex flex-col gap-1">
               <span className="text-sm text-gray-500 font-bold uppercase tracking-widest">Need help?</span>
-              <a href="mailto:support@algorx.ai" className="text-sm md:text-lg font-bold hover:text-[#f17625] transition-colors">
+              <a href="mailto:info@igniterx.com" className="text-sm md:text-lg font-bold hover:text-[#f17625] transition-colors">
                 info@igniterx.com
               </a>
             </div>
