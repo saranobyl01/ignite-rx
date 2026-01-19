@@ -263,6 +263,9 @@ export const BestSellers = () => {
           modules={[Navigation, Pagination]}
           spaceBetween={16}
           slidesPerView={1.2}
+          touchRatio={1}
+          threshold={5}
+          allowTouchMove={true}
           navigation={{
             prevEl: '.best-prev',
             nextEl: '.best-next',

@@ -75,6 +75,9 @@ export const ExploreTreatment = () => {
           modules={[Navigation, Pagination]}
           spaceBetween={20}
           slidesPerView={1.2} // Show a peek of the next slide on mobile
+          touchRatio={1}
+          threshold={5}
+          allowTouchMove={true}
           onBeforeInit={(swiper) => {
             // @ts-ignore
             swiper.params.navigation.prevEl = prevRef.current;

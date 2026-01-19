@@ -24,7 +24,7 @@ const services = [
   {
     title: "Longevity & Anti-Aging",
     image: longevity,
-    color: 'border-[#adc1d9]',
+    color: 'border-gray-500',
   },
   {
     title: "Sexual Health",
@@ -44,7 +44,7 @@ const services = [
   {
     title: "Lifestyle",
     image: lifestyle,
-    color: 'border-white',
+    color: 'border-black-500',
   }
 ];
 
