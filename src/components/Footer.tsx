@@ -71,11 +71,11 @@ export const Footer = () => {
           <div className="flex flex-col gap-6">
             <h4 className="text-sm text-gray-500 font-black tracking-[0.3em] uppercase">Contact Us</h4>
             <ul className="flex flex-col gap-3 text-sm font-bold uppercase tracking-widest">
-              <li><a href="#" className="hover:text-gray-400 transition-colors">Address: 
+              <li className="hover:text-gray-400 transition-colors"> Address: 
                 7901 4th Street North
                 Suite 300
-                St Petersburg, FL 33702</a></li>
-              <li><a href="#" className="hover:text-gray-400 transition-colors">Phone: +18448206625</a></li>
+                St Petersburg, FL 33702</li>
+              <li className="hover:text-gray-400 transition-colors">Phone: +18448206625</li>
             </ul>
           </div>
         </div>
