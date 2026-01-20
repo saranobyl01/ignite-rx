@@ -12,7 +12,7 @@ import AcidReflux from "./pages/Therapy/AcidReflux";
 import B12 from "./pages/Therapy/B12";
 import BirthControl from "./pages/Therapy/BirthControl";
 import ColdSores from "./pages/Therapy/ColdSores";
-import Eyelashes from "./pages/Therapy/Eyelashes";
+// import Eyelashes from "./pages/Therapy/Eyelashes";
 import Glutathione from "./pages/Therapy/Glutathione";
 import Hairloss from "./pages/Therapy/Hairloss";
 import HairlossMen from "./pages/Therapy/HairlossMen";
@@ -58,7 +58,7 @@ function App() {
          <Route path="/b12" element={<B12 />} />
          <Route path="/birth-control" element={<BirthControl />} />
          <Route path="/cold-sores" element={<ColdSores />} />
-         <Route path="/eyelashes" element={<Eyelashes />} />
+         {/* <Route path="/eyelashes" element={<Eyelashes />} /> */}
          <Route path="/glutathione" element={<Glutathione/>} />
          <Route path="/hairloss-women" element={<Hairloss/>} />
          <Route path="/hairloss-men" element={<HairlossMen/>} />

@@ -139,14 +139,14 @@ const products = [
   },
 
   // Beauty
-  {
+  /* {
     category: 'Beauty',
     catColor: 'text-pink-400',
     name: 'Eyelashes',
     price: '$119.00',
     image: med_drop,
     link: '/eyelashes'
-  },
+  }, */
   {
     category: 'Beauty',
     catColor: 'text-pink-400',

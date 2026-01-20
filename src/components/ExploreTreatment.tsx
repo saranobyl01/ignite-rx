@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -19,17 +20,17 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const treatments = [
-  { id: 1, title: 'Weight Loss', image: weightloss, color: 'border-purple-500' },
-  { id: 2, title: 'Sermorelin', image: performance, color: 'border-blue-500' },
+  { id: 1, title: 'Weight Loss', image: weightloss, color: 'border-purple-500', link: '/weightloss' },
+  { id: 2, title: 'Sermorelin', image: performance, color: 'border-blue-500', link: '/sermorelin' },
   // { id: 2, title: 'Performance', image: performance, color: 'border-blue-500' },
-  { id: 3, title: 'Metformin', image: cardio, color: 'border-orange-500' },
+  { id: 3, title: 'Metformin', image: cardio, color: 'border-orange-500', link: '/metformin' },
   // { id: 3, title: 'Cardiovascular', image: cardio, color: 'border-orange-500' },
-  { id: 4, title: 'Stop Smoking', image: stopsmoking, color: 'border-yellow-500' },
+  { id: 4, title: 'Stop Smoking', image: stopsmoking, color: 'border-yellow-500', link: '/stop-smoking' },
   // { id: 4, title: 'Metabolic', image: metabolic, color: 'border-yellow-500' },
-  { id: 5, title: 'Hair Loss', image: hairloss, color: 'border-blue-500' },
-  { id: 6, title: 'Lifestyle', image: lifestyle, color: 'border-black' },
-  { id: 7, title: 'Longevity', image: longivity, color: 'border-[#adc1d9]' },
-  { id: 8, title: 'Skincare', image: skincare, color: 'border-pink-300' },
+  { id: 5, title: 'Hair Loss', image: hairloss, color: 'border-blue-500', link: '/hairloss-men' },
+  { id: 6, title: 'Lifestyle', image: lifestyle, color: 'border-black', link: '/b12' },
+  { id: 7, title: 'Longevity', image: longivity, color: 'border-[#adc1d9]', link: '/glutathione' },
+  { id: 8, title: 'Skincare', image: skincare, color: 'border-pink-300', link: '/skincare' },
 ];
 
 export const ExploreTreatment = () => {
@@ -66,7 +67,7 @@ export const ExploreTreatment = () => {
         >
           {treatments.map((item) => (
             <SwiperSlide key={item.id}>
-              <div className={`relative group cursor-pointer overflow-hidden rounded-sm aspect-[3/4] border-b-[10px] ${item.color}`}>
+              <Link to={item.link} className={`block relative group cursor-pointer overflow-hidden rounded-sm aspect-[3/4] border-b-[10px] ${item.color}`}>
                 {/* Image with Grayscale effect */}
                 <img 
                   src={item.image} 
@@ -80,7 +81,7 @@ export const ExploreTreatment = () => {
                     {item.title}
                   </h3>
                 </div>
-              </div>
+              </Link>
             </SwiperSlide>
           ))}
 

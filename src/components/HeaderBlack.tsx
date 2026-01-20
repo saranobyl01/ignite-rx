@@ -151,7 +151,7 @@ export const HeaderBlack = () => {
                       <h3 className="text-sm font-bold text-white uppercase tracking-wider border-b border-gray-700 pb-2 min-h-[48px] flex items-end">Hair & Beauty</h3>
                       <div className="flex flex-col gap-2">
                         <Link to="/hairloss-women" className="text-xs text-gray-400 hover:text-white transition">Women's Hair Loss</Link>
-                        <Link to="/eyelashes" className="text-xs text-gray-400 hover:text-white transition">Eyelashes</Link>
+                        {/* <Link to="/eyelashes" className="text-xs text-gray-400 hover:text-white transition">Eyelashes</Link> */}
                         <Link to="/skincare" className="text-xs text-gray-400 hover:text-white transition">Skincare</Link>
                       </div>
                     </div>
@@ -198,12 +198,12 @@ export const HeaderBlack = () => {
 
           {/* Right side: Icons */}
           <div className="flex items-center gap-5 text-white">
-             <Link to="/" className="hidden md:block bg-[#f17625] hover:bg-[#d15e14] text-black text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-sm transition-colors">
+            {/*  <Link to="/" className="hidden md:block bg-[#f17625] hover:bg-[#d15e14] text-black text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-sm transition-colors">
               See If I Qualify
-            </Link>
-            <button className="hover:opacity-70 transition">
+            </Link> */}
+            <a href="http://member.ignite-rx.com/" className="hover:opacity-70 transition">
               <User size={20} />
-            </button>
+            </a>
             <Link to="/cart" className="relative hover:opacity-70 transition">
               <ShoppingCart size={20} />
               {cartCount > 0 && (
@@ -247,7 +247,7 @@ export const HeaderBlack = () => {
               <div className="flex flex-col gap-2 ml-4">
                 <Link to="/birth-control" onClick={() => setIsMenuOpen(false)} className="text-sm hover:text-[#f17625] transition">Birth Control</Link>
                 <Link to="/hairloss-women" onClick={() => setIsMenuOpen(false)} className="text-sm hover:text-[#f17625] transition">Women's Hair Loss</Link>
-                <Link to="/eyelashes" onClick={() => setIsMenuOpen(false)} className="text-sm hover:text-[#f17625] transition">Eyelashes</Link>
+                {/* <Link to="/eyelashes" onClick={() => setIsMenuOpen(false)} className="text-sm hover:text-[#f17625] transition">Eyelashes</Link> */}
                 <Link to="/skincare" onClick={() => setIsMenuOpen(false)} className="text-sm hover:text-[#f17625] transition">Skincare</Link>
               </div>
             </div>

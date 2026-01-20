@@ -22,7 +22,7 @@ export const Footer = () => {
 
           {/* LegitScript Badge */}
           <div className="w-28 md:w-40  p-3 rounded-xl flex flex-col items-center text-center gap-1 shadow-lg shadow-blue-900/10">
-            <Link to={""}>
+            <Link to={"https://www.legitscript.com/websites/?checker_keywords=ignite-rx.com"}>
             <img src={legal} alt="" />
             </Link>
           </div>
