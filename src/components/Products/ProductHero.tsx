@@ -87,7 +87,7 @@ const ProductHero = ({
                 <img
                   src={image}
                   alt={`${productName} - ${protocol}`}
-                  className="w-full h-auto max-h-[375px] object-contain transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-auto max-h-[500px] object-contain transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
             </div>
