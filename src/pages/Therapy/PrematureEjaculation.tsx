@@ -1,4 +1,4 @@
-import { HeaderBlack } from '@/components/HeaderBlack'
+import { Header } from "@/components/Header";
 import ProductHero from '@/components/Products/ProductHero'
 import React from 'react'
 import premature from "../../assets/therapy images/premature1.jpg"
@@ -61,7 +61,7 @@ const PrematureEjaculation = () => {
   ];
   return (
     <div>
-        <HeaderBlack/>
+        <Header variant="black" />
         <ProductHero
         protocol="SEXUAL DYSFUNCTION"
         productName="PREMATURE EJACULATION"

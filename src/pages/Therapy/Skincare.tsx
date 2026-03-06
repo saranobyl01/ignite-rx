@@ -1,4 +1,4 @@
-import { HeaderBlack } from '@/components/HeaderBlack'
+import { Header } from "@/components/Header";
 import ProductHero from '@/components/Products/ProductHero'
 import TrustBadges from '@/components/Products/TrustBadges'
 import React from 'react'
@@ -122,7 +122,7 @@ const Skincare = () => {
   ];
   return (
     <div>
-        <HeaderBlack/>
+        <Header variant="black" />
         <ProductHero
             protocol="Skin Care"
             productName="Skincare"

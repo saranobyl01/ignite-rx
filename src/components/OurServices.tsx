@@ -50,7 +50,7 @@ const services = [
 
 export const OurServices = () => {
   return (
-    <section className="bg-white text-black py-24 px-6 relative overflow-hidden md:pt-40">
+    <section className="bg-white text-black py-12 md:py-24 px-6 relative overflow-hidden pt-16 md:pt-40">
       {/* Decorative Yellow Lines (Background) */}
       <div className="absolute inset-0 pointer-events-none opacity-40">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">

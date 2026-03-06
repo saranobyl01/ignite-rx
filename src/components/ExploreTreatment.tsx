@@ -72,6 +72,7 @@ export const ExploreTreatment = () => {
                 <img 
                   src={item.image} 
                   alt={item.title} 
+                  loading="lazy"
                   className="w-full h-full object-cover brightness-75 group-hover:grayscale group-hover:scale-105 transition-all duration-500"
                 />
                 

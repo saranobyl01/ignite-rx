@@ -1,4 +1,4 @@
-import { HeaderBlack } from '@/components/HeaderBlack'
+import { Header } from "@/components/Header";
 import ProductHero from '@/components/Products/ProductHero'
 import React from 'react'
 import drop from "../../assets/drop.png"
@@ -89,7 +89,7 @@ const Eyelashes = () => {
 
   return (
     <div>
-        <HeaderBlack/>
+        <Header variant="black" />
         <ProductHero
         protocol="SKIN & AESTHETICS"
         productName="Eyelashes"

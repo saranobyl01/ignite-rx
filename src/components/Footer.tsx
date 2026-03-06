@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 import legal from "../assets/legit_script_certified.png";
 import payments from "../assets/payments.webp";
+import instagramIcon from "../assets/instagram.png";
 
 export const Footer = () => {
   return (
@@ -28,20 +29,25 @@ export const Footer = () => {
           </div>
         </div>
 
+        {/* Social Icons (Above Grid) */}
+        <div className='flex mb-8 md:justify-start justify-center -ml-2.5'>
+          <a href="https://instagram.com/IgniteRX_" target="_blank" rel="noopener noreferrer" className=" flex items-center hover:scale-110 transition-transform">
+            <img src={instagramIcon} alt="Instagram" className="w-[3.5rem] h-[3.5rem] object-contain" />
+          </a>
+        </div>
+
         {/* Middle Section: Links and Contact */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12 pb-20 text-center md:text-left">
           
           {/* Contact info */}
           <div className=" flex flex-col gap-1">
-            <div className='flex space-x-2 mb-4 md:justify-start justify-center '>
-              <a href="#" className=" bg-[#f17625]  flex items-center  text-black hover:scale-110 transition-transform">
-                <Instagram size={20} />
-              </a>
-            </div>
             <div className="flex flex-col gap-1">
               <span className="text-sm text-gray-500 font-bold uppercase tracking-widest">Need help?</span>
-              <a href="mailto:info@igniterx.com" className="text-sm md:text-lg font-bold hover:text-[#f17625] transition-colors">
-                info@igniterx.com
+              <a href="mailto:Support@Ignite-RX.com" className="text-sm md:text-lg font-bold hover:text-[#f17625] transition-colors">
+                Support@Ignite-RX.com
+              </a>
+              <a href="mailto:Info@Ignite-RX.com" className="text-sm md:text-lg font-bold hover:text-[#f17625] transition-colors mt-1">
+                Info@Ignite-RX.com
               </a>
             </div>
           </div>

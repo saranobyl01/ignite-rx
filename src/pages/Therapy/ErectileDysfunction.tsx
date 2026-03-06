@@ -1,4 +1,4 @@
-import { HeaderBlack } from '@/components/HeaderBlack'
+import { Header } from "@/components/Header";
 import ProductHero from '@/components/Products/ProductHero'
 import React, { useState } from 'react'
 import bottle from "../../assets/bottle.png"
@@ -146,7 +146,7 @@ const ErectileDysfunction = () => {
 
     return (
         <div className="bg-white min-h-screen">
-            <HeaderBlack />
+            <Header variant="black" />
             
             <section className="relative py-12 lg:py-20 mt-[64px]">
                 <div className="container mx-auto px-4">

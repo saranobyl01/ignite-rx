@@ -1,4 +1,4 @@
-import { HeaderBlack } from '@/components/HeaderBlack'
+import { Header } from "@/components/Header";
 import ProductHero from '@/components/Products/ProductHero'
 import React from 'react'
 import vial from "../../assets/vial.png"
@@ -85,7 +85,7 @@ const Glutathione = () => {
   ];
   return (
     <div>
-        <HeaderBlack/>
+        <Header variant="black" />
         <ProductHero
             protocol="Antioxidant Power Protocol"
             productName="GLUTATHIONE"

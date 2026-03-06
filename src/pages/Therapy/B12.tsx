@@ -1,4 +1,4 @@
-import { HeaderBlack } from '@/components/HeaderBlack'
+import { Header } from "@/components/Header";
 import ProductDescription from '@/components/Products/ProductDescription'
 import ProductHero from '@/components/Products/ProductHero'
 import TrustBadges from '@/components/Products/TrustBadges'
@@ -36,7 +36,7 @@ const B12 = () => {
 
   return (
     <div>
-      <HeaderBlack />
+      <Header variant="black" />
       <ProductHero
         protocol="LONGEVITY & VITALITY"
         productName="B12"

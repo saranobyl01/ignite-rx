@@ -1,4 +1,4 @@
-import { HeaderBlack } from '@/components/HeaderBlack'
+import { Header } from "@/components/Header";
 import ProductHero from '@/components/Products/ProductHero'
 import React from 'react'
 import bottle from "../../assets/bottle.png"
@@ -88,7 +88,7 @@ const benefits = [
   ];
   return (
     <div>
-        <HeaderBlack/>
+        <Header variant="black" />
         <ProductHero
             protocol="Metformin"
             productName="Metformin XR: Anti-Aging"

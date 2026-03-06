@@ -1,4 +1,4 @@
-import { HeaderBlack } from '@/components/HeaderBlack'
+import { Header } from "@/components/Header";
 import ProductHero from '@/components/Products/ProductHero'
 import TrustBadges from '@/components/Products/TrustBadges'
 import React from 'react'
@@ -21,7 +21,7 @@ const Pt141 = () => {
   ];
   return (
     <div>
-        <HeaderBlack/>
+        <Header variant="black" />
         <ProductHero
             protocol="Sexual Health & Wellness"
             productName="PT-141 (Bremelanotide)"

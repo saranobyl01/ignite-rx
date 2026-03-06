@@ -1,4 +1,4 @@
-import { HeaderBlack } from '@/components/HeaderBlack'
+import { Header } from "@/components/Header";
 import ProductHero from '@/components/Products/ProductHero'
 import React from 'react'
 import vial from "../../assets/vial.png"
@@ -101,7 +101,7 @@ const WeightLoss = () => {
 
   return (
     <div>
-        <HeaderBlack/>
+        <Header variant="black" />
         <ProductHero
         protocol="WEIGHT LOSS"
         productName="Compounded Semaglutide & Tirzepatide"

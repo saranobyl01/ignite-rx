@@ -227,7 +227,7 @@ const products = [
 
 export const BestSellers = () => {
   return (
-    <section className="bg-white text-black py-8 md:py-18">
+    <section className="bg-white text-black py-8 md:py-24">
       <div className="px-6">
         
         {/* Header */}
@@ -288,6 +288,7 @@ export const BestSellers = () => {
                   <img 
                     src={product.image} 
                     alt={product.name} 
+                    loading="lazy"
                     className="w-full h-full object-contain scale-[1.2] p-0 transition-transform duration-500 group-hover:scale-[1.35]"
                   />
                 </div>

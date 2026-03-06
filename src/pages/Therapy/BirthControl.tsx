@@ -1,4 +1,4 @@
-import { HeaderBlack } from '@/components/HeaderBlack'
+import { Header } from "@/components/Header";
 import ProductHero from '@/components/Products/ProductHero'
 import React from 'react'
 import { useCart } from '@/context/CartContext'
@@ -161,7 +161,7 @@ const BirthControl = () => {
 
   return (
     <div>
-        <HeaderBlack/>
+        <Header variant="black" />
         <ProductHero
         protocol="Birth Control"
         productName="Oral Contraceptives"

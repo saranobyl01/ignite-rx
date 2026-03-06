@@ -1,4 +1,4 @@
-import { HeaderBlack } from '@/components/HeaderBlack';
+import { Header } from "@/components/Header";
 import ProductDescription from '@/components/Products/ProductDescription';
 import ProductFAQ from '@/components/Products/ProductFAQ';
 import ProductHero from '@/components/Products/ProductHero';
@@ -101,7 +101,7 @@ const HairlossMen = () => {
   ];
   return (
     <div>
-        <HeaderBlack/>
+        <Header variant="black" />
         <ProductHero
         protocol="HAIR RESTORATION"
         productName="Men's Hair Loss"

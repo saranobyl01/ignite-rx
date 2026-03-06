@@ -1,4 +1,4 @@
-import { HeaderBlack } from '@/components/HeaderBlack'
+import { Header } from "@/components/Header";
 import ProductDescription from '@/components/Products/ProductDescription';
 import ProductHero from '@/components/Products/ProductHero';
 import TrustBadges from '@/components/Products/TrustBadges';
@@ -75,7 +75,7 @@ const NadNasal = () => {
   ];
   return (
     <div>
-        <HeaderBlack/>
+        <Header variant="black" />
         <ProductHero
             protocol="Brain + Body Energy Protocol"
             productName="NAD+ NASAL SPRAY"

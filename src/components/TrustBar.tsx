@@ -16,9 +16,9 @@ const TrustBar = () => {
   return (
     <div>
         {/* --- TRUST BAR SECTION --- */}
-      <section className="bg-white border-t border-black/10 py-8 md:py-10 overflow-hidden">
+      <section className="bg-white border-t border-black/10 py-4 md:py-10 overflow-hidden">
         <div className="container mx-auto px-6 md:px-12">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-2 md:gap-8">
             {trustFeatures.map((feature, index) => (
               <div key={index} className="flex items-center gap-2">
                 <Check size={14} className="text-black opacity-80" />

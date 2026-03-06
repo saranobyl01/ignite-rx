@@ -22,25 +22,25 @@ const HowItWorks = () => {
 
 
   return (
-    <section className="bg-white text-black pt-20 overflow-hidden relative">
-      {/* 1. Main Headline */}
-      <div className="container mx-auto px-6 text-center mb-6 md:mb-16 relative z-10 pb-20 lg:pb-60">
-        <h2 className=" text-black text-3xl md:text-[70px] md:leading-[70px] font-extrabold leading-tight uppercase max-w-[864px] mx-auto">
-        Healthcare designed for individualized care, guided by licensed physicians
+    <section className="bg-white text-black pt-12 md:pt-20 overflow-hidden relative">
+      {/* 1. Main Headline & Image */}
+      <div className="container mx-auto px-6 text-center relative z-10 flex flex-col items-center">
+        <h2 className=" text-black text-3xl md:text-[70px] md:leading-[70px] font-extrabold leading-tight uppercase max-w-[864px] mx-auto mb-4 md:mb-8">
+        Physician Guided Therapies for those that Burn Brighter.
         </h2>
-      </div>
 
-      {/* 2. Floating Product Image */}
-      <div className="absolute top-[50%] md:top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 pointer-events-none">
-        <img 
-          src={bottle} 
-          alt="Tadalafil Bottle" 
-          className="w-[500px] h-auto rotate-[-20deg]"
-        />
+        {/* 2. Product Image right below text */}
+        <div className="relative z-30 pointer-events-none mb-8 md:mb-10 mt-[-20px] md:mt-[-40px]">
+          <img 
+            src={bottle} 
+            alt="Tadalafil Bottle" 
+            className="w-[300px] md:w-[500px] h-auto rotate-[-20deg]"
+          />
+        </div>
       </div>
 
       {/* 3. Infinite Scrolling Ticker (Using Swiper) */}
-      <div className="relative border-y border-black/10 py-6 bg-white z-20">
+      <div className="relative border-y border-black/10 py-6 bg-white z-20 mt-auto">
         <Swiper
           modules={[Autoplay]}
           spaceBetween={50}

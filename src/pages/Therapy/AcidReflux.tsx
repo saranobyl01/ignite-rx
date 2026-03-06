@@ -1,4 +1,4 @@
-import { HeaderBlack } from '@/components/HeaderBlack';
+import { Header } from "@/components/Header";
 import ProductHero from '@/components/Products/ProductHero'
 import { useToast } from '@/hooks/use-toast';
 import React from 'react'
@@ -24,7 +24,7 @@ const AcidReflux = () => {
 
   return (
     <div>
-        <HeaderBlack/>
+        <Header variant="black" />
         <ProductHero
         protocol="DIGESTIVE HEALTH"
         productName="Omeprazole"

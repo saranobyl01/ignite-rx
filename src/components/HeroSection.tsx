@@ -9,7 +9,7 @@ export const HeroSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative h-screen w-full flex items-end overflow-hidden">
+    <section className="relative h-[85vh] md:h-screen w-full flex items-end overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
@@ -43,14 +43,14 @@ export const HeroSection = () => {
           </div> */}
 
           {/* Headline */}
-          <h1 className="text-5xl  lg:text-[120px] font-extrabold tracking-[-2px] md:tracking-[-4.8px]  md:leading-[120px] my-4 uppercase">
-          Lose Your Weight Easily
+          <h1 className="text-5xl lg:text-[120px] font-extrabold tracking-[-2px] md:tracking-[-4.8px] md:leading-[120px] my-2 md:my-4 uppercase">
+          Ignite Change
           </h1>
          
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl lg:text-[20px] mb-6 md:mb-10 font-inter font-normal">
-            Medications & Labs to fuel your performance
+            Medications and Labs Engineered for Enhanced Performance
           </p>
 
           {/* Action Buttons */}

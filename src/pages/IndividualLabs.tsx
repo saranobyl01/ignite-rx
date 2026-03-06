@@ -7,7 +7,7 @@ import { useCart } from "@/contexts/CartContext";
 import { useToast } from "@/hooks/use-toast";
 import testtube from "../assets/yellow_testtube.png"
 import heroLabsImage from "@/assets/hero-labs.webp";
-import { HeaderBlack } from "@/components/HeaderBlack";
+import { Header } from "@/components/Header";
 
 // ---------------- DEMO DATA ----------------
 
@@ -1601,7 +1601,7 @@ export default function IndividualLabs() {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden w-full max-w-full mt-20">
 
-    <HeaderBlack />
+    <Header variant="black" />
         <div className="container mx-auto py-8 px-2 md:py-8 md:px-auto">
         {/* ---------------- TOP TABS ---------------- */}
          <div className="flex gap-3 mb-8 bg-gray-100 max-w-max p-[5px] rounded-lg">
